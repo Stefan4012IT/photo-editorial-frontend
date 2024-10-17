@@ -1,0 +1,147 @@
+.btn-editorials {
+    width: 3.4375rem; //55px
+    height: 3.4375rem; //55px
+
+    &:hover {
+        
+    }
+
+    .box-btn-editorials {
+        display: grid;
+        grid-template-columns: repeat(2, 25px);
+        grid-template-rows: repeat(2, 25px);
+        grid-gap: 5px;
+        transition: all .3s;
+        border-top: transparent 1px solid;
+        border-right: transparent 1px solid;
+        height: 3.4375rem;
+        width: 3.4375rem;
+
+        .anime-text {
+            color: #000;
+            font-size: 18px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotateZ(-45deg);
+            z-index: 1000;
+            visibility: visible;
+            opacity: 0;
+            margin-top: -5px;
+            
+        }
+
+        &:hover {
+            cursor: pointer;
+            grid-gap: 0;
+            animation: rotation-45 .5s forwards .3s;
+
+            .anime-text {
+                animation: anime-text .3s forwards 1s;
+            }
+
+            .three {
+                animation: after-rotation .3s forwards .8s;
+            }
+
+            // .one {
+            //     animation: after-rotation .3s forwards .8s, border-top .3s forwards .8s;
+            // }
+
+            // .two {
+            //     animation: after-rotation .3s forwards .8s, border-top .3s forwards .8s, border-right .3s forwards .8s;
+            // }
+
+            // .four {
+            //     animation: after-rotation .3s forwards .8s, border-right .3s forwards .8s;
+            // }
+        }
+
+        .one, .two, .three, .four {
+            background-color: #000;
+        }
+
+        .one {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            border-top: transparent 1px solid;
+        }
+        .two {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            border-top: transparent 1px solid;
+            border-right: transparent 1px solid;
+        }
+        .three {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            border-right: transparent 1px solid;
+        }
+        .four {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+    }
+}
+
+@keyframes rotation-45 {
+    0%{
+        transform: rotateZ(0deg);
+    }100% {
+        transform: rotateZ(45deg);
+        margin-left: 25px;
+    }
+}
+
+@keyframes anime-text {
+    0%{
+        visibility: visible;
+        opacity: 0;
+        padding-right: 300px;
+    } 100% {
+        visibility: visible;
+        opacity: 1;
+        padding-right: 120px;
+    }
+}
+
+@keyframes border-top {
+    0%{
+        border-top: transparent 1px solid;
+    } 100% {
+        border-top: #000 1px solid;
+    }
+}
+
+@keyframes border-right {
+    0%{
+        border-right: transparent 1px solid;
+    } 100% {
+        border-right: #000 1px solid;
+    }
+}
+
+@keyframes after-rotation {
+    0%{
+        background-color: transparent;
+    }100% {
+        background-color: transparent;
+    }
+}
+
+.btn-load-more {
+    width: 240px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+
+    .btn-text {
+        color: #FFF;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

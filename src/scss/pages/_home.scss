@@ -1,0 +1,204 @@
+@import '../base/variables';
+
+.home-container {
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-left: 2px #000 solid;
+    border-right: 2px #000 solid;
+    max-width: 85rem; //1360px
+
+    .hero-container {
+      position: relative;
+      min-height: calc(100vh - var(--header-margin) - var(--header-height));
+      border-bottom: 2px #000 solid;
+      display: flex;
+      
+
+      .container-left {
+        position: relative;
+        border-right: 1px #222 solid;
+        height: calc(100vh - var(--header-margin) - var(--header-height));
+        width: 800px;
+
+        .navigation {
+          position: relative;
+          width: 100%;
+          top: 50%;
+          //transform: translateY(-50%);
+          
+    
+          .nav-box {
+            width: 100%;
+            height: 5.625rem; /* 90px u rem */
+            grid-column: 1/9;
+            display: flex;
+            justify-content: center;
+            a {
+              display: flex;
+              align-items: end;
+              @include grid-layout(8);
+            }
+    
+            &.nav-box-1 {
+              h2 {
+                grid-column: 2/-1;
+              }
+            }
+    
+            &.nav-box-2 {
+              h2{
+                grid-column: 3/-1;
+                margin-left: -40px;
+              }
+              
+              border-top: 1px solid #222;
+              border-bottom: 1px solid #222;
+            }
+    
+            &.nav-box-3 {
+              h2 {
+                grid-column: 3/-1;
+              }
+              border-bottom: 1px solid #222;
+            }
+          }
+        }
+        
+      }
+  
+      .container-right {
+        position: relative;
+        height: calc(100vh - var(--header-margin) - var(--header-height));
+        width: 100%;
+        padding-right: 100px;
+        display: flex;
+        align-items: center;
+        .text-box-hero {
+          
+          margin-left: 140px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          p {
+            font-size: 1.625rem;
+            font-family: $font-paragraphs;
+            font-weight: 400;
+          }
+        }
+  
+      }
+  
+      
+    }
+
+    
+  }
+  
+  .section-about {
+      margin: 7.5rem auto;
+      max-width: 72.5rem;
+      
+      .about-content-box {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+
+        .profil-img {
+          width: 100%;
+          height: 100%;
+          img {
+            width: 400px;
+            height: 500px;
+            
+          }
+        }
+        .about-text-content {
+          margin-left: 100px;
+          p{
+            font-size: 1.625rem;
+          }
+          
+        }
+      }
+
+      
+  }
+
+  .section-editorials {
+      max-width: 72.5rem;
+      margin: 0 auto;
+      padding-bottom: 60px;
+
+      .editorials-content-box {
+        width: 100%;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+
+        .editorials {
+          display: flex;
+          flex-direction: row;
+          .first-img {
+            width: 100%;
+            height: 100%;
+          }
+  
+          .second-img {
+            width: 100%;
+            height: 100%;
+            margin: 0 40px;
+          }
+  
+          .third-img {
+            width: 100%;
+            height: 100%;
+          }
+  
+          .first-img, .third-img {
+            img {
+              width: 360px;
+              height: 540px;
+            }
+          }
+  
+          .second-img {
+            img {
+              width: 360px;
+              height: 490px;
+            }
+          }
+        }
+
+        
+
+        .btn-editorials-container {
+          width: 100%;
+          padding: 10px 0 60px 0;
+          .btn-editorials {
+            margin: 0 auto;
+          }
+        }
+      }
+      .btn-load-more-container {
+        width: 100%;
+        
+
+        .btn-load-more {
+          margin: 0 auto;
+        }
+      }
+  }
+  
+  .footer-section {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    
+    p {
+      font-size: 0.9rem;
+      color: #999;
+    }
+  }

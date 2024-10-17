@@ -1,0 +1,18 @@
+@import '../base/variables';
+
+body {
+  font-family: $font-primary;
+}
+
+p.body-text {
+  font-size: 1.625rem;
+}
+
+h2.titles {
+  font-size: 2.625rem;
+  font-weight: 500;
+}
+
+span.btn-text {
+  font-size: 1.5rem;
+}

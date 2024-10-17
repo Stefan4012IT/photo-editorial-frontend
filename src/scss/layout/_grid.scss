@@ -1,0 +1,47 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.grid-container {
+    flex-grow: 1; 
+    display: grid;
+    grid-template-columns: repeat(12, 3.75rem); // 12 kolona po 3.75rem (60px)
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 0 2.5rem; // Razmak od 2.5rem (40px)
+    max-width: 1160px;
+    margin: 0 auto;
+    justify-content: center;
+    height: 100%;
+
+    @media (max-width: 62rem) { // 992px
+        max-width: 48rem; // 768px
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 0;
+    }
+  }
+  
+
+  // Automatski generisanje klasa za sve moguće kombinacije
+// Klase: grid-item-X-to-Y
+// Prvo definišemo osnovnu grid-item klasu koja se koristi na svim ekranima
+@for $start from 1 through 12 {
+    @for $end from $start + 1 through 13 {
+      .grid-item-#{$start}-to-#{$end} {
+        grid-column: #{$start} / #{$end}; 
+        grid-row: 1/1;
+      }
+    }
+  }
+  
+  // Sada generišemo klase za specifične breakpointove (sm, md, lg, xl)
+  @each $breakpoint, $size in $breakpoints {
+    @media (min-width: #{$size}) {
+      @for $start from 1 through 12 {
+        @for $end from $start + 1 through 13 {
+          .grid-item-#{$breakpoint}-#{$start}-to-#{$end} {
+            grid-column: #{$start} / #{$end}; 
+            grid-row: 1/1;
+          }
+        }
+      }
+    }
+  }

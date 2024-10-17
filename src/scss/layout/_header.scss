@@ -1,0 +1,62 @@
+@import '../base/variables';
+@import '../layout/grid';
+
+:root {
+    --header-margin: 3.75rem; /* 60px u rem */
+    --header-height: 5.625rem; /* 90px u rem */
+  }
+
+.header {
+    position: relative;
+    margin-top: var(--header-margin);
+    height: var(--header-height);
+    border: 2px solid black;
+    
+    
+
+    .header-container {
+      max-width: 72.5rem; //1160px 
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+      h1.title {
+        font-size: 1.75rem;
+        font-family: $font-title !important;
+        font-weight: 800;
+      }
+  
+      .circle { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: end;
+        width: 3.125rem; /* 50px prečnik */
+        height: 3.125rem; /* 50px prečnik */
+        background-color: black;
+        border-radius: 50%;
+      }
+    
+  }
+  
+  @media (max-width: 62rem) {
+    .header {
+        height: var(--header-height); /* Koristi promjenljive u media query */
+        margin-top: var(--header-margin);
+  
+  
+        .circle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 3.125rem; /* 50px prečnik */
+          height: 3.125rem; /* 50px prečnik */
+          background-color: black;
+          border-radius: 50%;
+        }
+      
+    }
+  }

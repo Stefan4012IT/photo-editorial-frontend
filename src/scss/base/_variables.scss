@@ -1,0 +1,16 @@
+$breakpoints: (
+  'sm': 37.5rem,   // 600px
+  'md': 48rem,     // 768px
+  'lg': 62rem,     // 992px
+  'xl': 75rem      // 1200px
+);
+
+$font-primary: 'Montserrat', sans-serif;
+//$font-title: "Cormorant Garamond", serif;
+$font-paragraphs: "Cormorant Garamond", serif;
+//$font-paragraphs: "Oooh Baby", cursive;
+$font-paragraphs: 'Montserrat', sans-serif;
+//$font-title: 'Ostrovsky Bold';
+$font-title: "Syne", sans-serif;;
+$color-primary: #333;
+$color-secondary: #666;

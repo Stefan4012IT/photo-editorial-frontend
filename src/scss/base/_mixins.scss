@@ -1,0 +1,10 @@
+@mixin grid-item-position($start, $end) {
+    grid-column-start: $start;
+    grid-column-end: $end;
+  }
+
+@mixin grid-layout($columns: 12, $gap: 2.5rem) {
+  display: grid;
+  grid-template-columns: repeat($columns, 3.75rem);
+  grid-gap: 0 $gap;
+}
