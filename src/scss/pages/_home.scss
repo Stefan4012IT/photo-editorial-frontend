@@ -1,5 +1,10 @@
 @import '../base/variables';
 
+#noiseLight {
+  width: 200px;
+  height: 200px;
+}
+
 .home-container {
     height: 100%;
     position: relative;
@@ -190,6 +195,17 @@
           margin: 0 auto;
         }
       }
+  }
+
+  .section-contact {
+    //margin: 7.5rem 0;
+    position: relative;
+
+    #noise {
+      position:  relative !important;
+      z-index: 1000 !important;
+      height: 600px;
+    }
   }
   
   .footer-section {

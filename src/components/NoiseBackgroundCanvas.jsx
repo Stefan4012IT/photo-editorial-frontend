@@ -28,17 +28,13 @@ const NoiseBackgroundCanvas = () => {
       // Generisanje noise patterna
       const generateNoisePattern = () => {
         const imageData = noiseCtx.createImageData(noiseSize, noiseSize);
-        const baseR = 237;
-        const baseG = 240;
-        const baseB = 236;
-
-      for (let i = 0; i < imageData.data.length; i += 4) {
-        const randomOffset = Math.random() * 20 - 10; // Varijacija od -10 do +10
-        imageData.data[i] = baseR + randomOffset; // Red
-        imageData.data[i + 1] = baseG + randomOffset; // Green
-        imageData.data[i + 2] = baseB + randomOffset; // Blue
-        imageData.data[i + 3] = 100; // Alpha
-      }
+        for (let i = 0; i < imageData.data.length; i += 4) {
+          const noiseValue = Math.random() * 255; // Random grayscale noise
+          imageData.data[i] = noiseValue; // Red
+          imageData.data[i + 1] = noiseValue; // Green
+          imageData.data[i + 2] = noiseValue; // Blue
+          imageData.data[i + 3] = 30; // Alpha, transparentnost
+        }
         noiseCtx.putImageData(imageData, 0, 0);
       };
 
