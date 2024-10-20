@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router basename="/photo-editorial-frontend">
       <Routes>
         {/* Ruta za početnu stranicu */}
         <Route path="/" element={<Home />} />
