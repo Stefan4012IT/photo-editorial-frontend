@@ -146,6 +146,28 @@
     }
 }
 
+.btn-send {
+    position: relative;
+    width: 240px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .noiseBackgroundLight {
+        z-index: 100;
+    }
+
+    .btn-text {
+        color: #000;
+        z-index: 1000;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 // <feColorMatrix 
 //           type="matrix" 
 //           values="0.7 0 0 0 0 

@@ -5,11 +5,14 @@ import profilImg from '../assets/img/profile_pic_trail.jpg';
 import editorial_1 from '../assets/img/edotorial_1.1.jpg';
 import editorial_2 from '../assets/img/edotorial_2.1.jpg';
 import editorial_3 from '../assets/img/edotorial_3.1.jpg';
+import aboveFooter from '../assets/img/above_footer_2.1.jpg';
 import ButtonEditorials from '../components/ButtonEditorials';
 import ButtonLoadMore from '../components/ButtonLoadMore';
 import NoiseBackgroundDark from '../components/NoiseBackgroundDark';
 import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
 import NoiseBackgroundCanvas from '../components/NoiseBackgroundCanvas';
+import ButtonSend from '../components/ButtonSend';
+import Footer from '../components/Footer';
 
 const Home = () => {
     return (
@@ -80,18 +83,37 @@ const Home = () => {
             
           </div>
           <div className="section-contact">
-            <div id="noise">
             <NoiseBackgroundDark />
             {/* <NoiseBackgroundVelvet /> */}
+            <div className="section-contact-container">
+              <p className='body-text'>Feel free to reach out with any questions or curiosities; no matter how big or small, I welcome every inquiry with the same open lens through which I see the world.</p>
+
+              <div className="contact-form">
+              <div className="form-group">
+                <p className="form-label">
+                  Your Email:
+                </p>
+                <input type="text" name="email" id="email" placeholder='email@example.com'/>
+              </div>
+              <div className="form-group">
+                <p className="form-label">
+                  Your Message:
+                </p>
+                <textarea  rows="6" name="message" id="message" placeholder='Please enter your message...'/>
+              </div>
+              <ButtonSend />
+            </div>
             </div>
             
+            
+          </div>
+          <div className="section-photography">
+            <img src={aboveFooter} alt="photo-editorial" />
           </div>
         </div>
         
-        
-      <footer className="footer-section">
-          <p>&copy; 2024 Galerija Milena Antić</p>
-        </footer>
+        <Footer />
+      
       </>
     );
   };

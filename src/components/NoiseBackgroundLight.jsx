@@ -37,7 +37,7 @@ const NoiseBackgroundCanvas = () => {
         imageData.data[i] = baseR + randomOffset; // Red
         imageData.data[i + 1] = baseG + randomOffset; // Green
         imageData.data[i + 2] = baseB + randomOffset; // Blue
-        imageData.data[i + 3] = 100; // Alpha
+        imageData.data[i + 3] = 1000; // Alpha
       }
         noiseCtx.putImageData(imageData, 0, 0);
       };
@@ -72,8 +72,9 @@ const NoiseBackgroundCanvas = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: -1,
+        zIndex: -1
       }}
+      className='noiseBackgroundLight'
     />
   );
 };
