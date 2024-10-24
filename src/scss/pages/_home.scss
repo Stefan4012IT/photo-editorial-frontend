@@ -613,8 +613,17 @@
   .section-photography {
     max-width: 100%;
     display: flex;
+
+    @media only screen and (max-width: 52.5rem) { //840px
+      height: 300px;
+    } 
+
     img{
       width: 100%;
+      @media only screen and (max-width: 52.5rem) { //840px
+        object-fit: cover;
+        object-position: left;
+      } 
     }
   }
   
