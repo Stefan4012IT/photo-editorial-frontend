@@ -37,7 +37,7 @@
             z-index: 1000;
             visibility: visible;
             opacity: 0;
-            margin-top: -5px;
+            margin-top: -15px;
 
             @media only screen and (max-width: 75rem) { //1600px
                 font-size: 1rem;
@@ -53,6 +53,10 @@
 
             .anime-text {
                 animation: anime-text .3s forwards .7s;
+
+                @media only screen and (max-width: 75rem) { //1200px
+                    animation: anime-text-medium-screen .3s forwards .7s;
+                }
             }
 
             .three {
@@ -105,12 +109,12 @@
     } 100% {
         visibility: visible;
         opacity: 1;
-        padding-right: 120px;
+        padding-right: 140px;
     }
 }
 
-@media only screen and (max-width: 75rem) { //1600px
-    @keyframes anime-text {
+
+    @keyframes anime-text-medium-screen {
         0%{
             visibility: visible;
             opacity: 0;
@@ -122,7 +126,7 @@
             padding-right: 80px;
         }
     }
-}
+
 
 @keyframes border-top {
     0%{
