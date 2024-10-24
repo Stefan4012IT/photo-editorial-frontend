@@ -5,18 +5,43 @@ body {
 }
 
 p.body-text {
-  font-size: 1.625rem;
+  font-size: 1.625rem; // 26px
+  font-family: $font-paragraphs;
+  @media only screen and (max-width: 100rem) { //1600px
+    font-size: 1.4375rem; // 23px;
+  }
 }
 
-p.form-label {
-  font-size: 1.25rem;
+p.form-label, span.name {
+  font-size: 1.25rem; //20px
+
+  @media only screen and (max-width: 100rem) { //1600px
+    font-size: 1.125rem; //18px;
+  }
 }
 
 h2.titles {
-  font-size: 2.625rem;
+  font-size: 2.625rem; //42px
   font-weight: 500;
+
+  @media only screen and (max-width: 100rem) { //1600px
+    font-size: 2.375rem; //38px;
+  }
 }
 
 span.btn-text {
   font-size: 1.5rem;
+
+  @media only screen and (max-width: 100rem) { //1600px
+    font-size: 1.25rem; // 20px;
+  }
+}
+
+.footer-subtitle {
+  font-size: 1.75rem; // 28px
+  font-weight: 400;
+
+  @media only screen and (max-width: 100rem) { //1600px
+    font-size: 1.625rem; // 26px;
+  }
 }

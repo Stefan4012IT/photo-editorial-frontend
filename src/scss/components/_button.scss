@@ -129,13 +129,25 @@
     }
 }
 
-.btn-load-more {
+.btn-load-more, .btn-send {
+    position: relative;
     width: 240px;
     height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 100rem) { //1600px
+        width: 200px;
+        height: 65px;
+      }
+}
+
+.btn-load-more {
+    
     background-color: #000;
+
+    
 
     .btn-text {
         color: #FFF;
@@ -147,12 +159,6 @@
 }
 
 .btn-send {
-    position: relative;
-    width: 240px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     .noiseBackgroundLight {
         z-index: 100;

@@ -3,8 +3,8 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className="footer">
-        <div className="footer-container">
-            <div className="footer-content">
+        <div className="footer-container container">
+            <div className="footer-content container-content">
             <h2 className='titles'>CONTACTS</h2>
             <div className="content-box">
               <div className="social-networks">

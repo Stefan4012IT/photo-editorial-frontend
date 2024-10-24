@@ -7,4 +7,9 @@
   display: grid;
   grid-template-columns: repeat($columns, 3.75rem);
   grid-gap: 0 $gap;
+
+  @media only screen and (max-width: 100rem) { //1600px
+    grid-template-columns: repeat($columns, 3.125rem);
+    grid-gap: 0 1.875rem;
+  }
 }

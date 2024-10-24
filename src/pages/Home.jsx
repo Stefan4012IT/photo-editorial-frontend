@@ -22,7 +22,7 @@ const Home = () => {
         
         <Header />
         <div className="home">
-          <div className="home-container">
+          <div className="home-container container">
             <div className="hero-container">
                 <div className="container-left">
                   <div className="navigation">
@@ -41,7 +41,7 @@ const Home = () => {
                 </div>
               
             </div>
-            <div className="section-about">
+            <div className="section-about container-content">
                 <h2 className='titles'>ABOUT</h2>
                 <div className="about-content-box">
                   <div className="profil-img">
@@ -55,7 +55,7 @@ const Home = () => {
                 </div>
                 
             </div>
-            <div className="section-editorials">
+            <div className="section-editorials container-content">
               <h2 className='titles'>EDITORIALS</h2>
               <div className="editorials-content-box">
                 <div className="editorials">
@@ -85,7 +85,7 @@ const Home = () => {
           <div className="section-contact">
             <NoiseBackgroundDark />
             {/* <NoiseBackgroundVelvet /> */}
-            <div className="section-contact-container">
+            <div className="section-contact-container container">
               <p className='body-text'>Feel free to reach out with any questions or curiosities; no matter how big or small, I welcome every inquiry with the same open lens through which I see the world.</p>
 
               <div className="contact-form">
