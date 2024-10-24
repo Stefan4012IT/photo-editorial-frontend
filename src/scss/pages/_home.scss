@@ -400,6 +400,11 @@
           }
   
           .second-img {
+
+            @media only screen and (max-width: 31.25rem) { //500px
+              width: 100%;
+            } 
+
             img {
               width: 360px;
               height: 490px;
