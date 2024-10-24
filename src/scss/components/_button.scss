@@ -2,20 +2,30 @@
     width: 3.4375rem; //55px
     height: 3.4375rem; //55px
 
+    @media only screen and (max-width: 75rem) { //1600px
+        width: 2.8125rem; // 45px
+        height: 2.8125rem;
+    }
+
     &:hover {
         
     }
 
     .box-btn-editorials {
         display: grid;
-        grid-template-columns: repeat(2, 25px);
-        grid-template-rows: repeat(2, 25px);
+        grid-template-columns: repeat(2, 20px);
+        grid-template-rows: repeat(2, 20px);
         grid-gap: 5px;
         transition: all .3s;
         border-top: transparent 1px solid;
         border-right: transparent 1px solid;
         height: 3.4375rem;
         width: 3.4375rem;
+
+        @media only screen and (max-width: 75rem) { //1600px
+            width: 1.25rem; // 20px
+            height: 1.25rem;
+        }
 
         .anime-text {
             color: #000;
@@ -28,6 +38,11 @@
             visibility: visible;
             opacity: 0;
             margin-top: -5px;
+
+            @media only screen and (max-width: 75rem) { //1600px
+                font-size: 1rem;
+                margin-top: 20px;
+            }
             
         }
 
@@ -43,18 +58,6 @@
             .three {
                 animation: after-rotation .3s forwards;
             }
-
-            // .one {
-            //     animation: after-rotation .3s forwards .8s, border-top .3s forwards .8s;
-            // }
-
-            // .two {
-            //     animation: after-rotation .3s forwards .8s, border-top .3s forwards .8s, border-right .3s forwards .8s;
-            // }
-
-            // .four {
-            //     animation: after-rotation .3s forwards .8s, border-right .3s forwards .8s;
-            // }
         }
 
         .one, .two, .three, .four {
@@ -98,10 +101,26 @@
         visibility: visible;
         opacity: 0;
         padding-right: 300px;
+
     } 100% {
         visibility: visible;
         opacity: 1;
         padding-right: 120px;
+    }
+}
+
+@media only screen and (max-width: 75rem) { //1600px
+    @keyframes anime-text {
+        0%{
+            visibility: visible;
+            opacity: 0;
+            padding-right: 300px;
+    
+        } 100% {
+            visibility: visible;
+            opacity: 1;
+            padding-right: 80px;
+        }
     }
 }
 
@@ -141,6 +160,11 @@
         width: 200px;
         height: 65px;
       }
+
+    @media only screen and (max-width: 75rem) { //1200px
+    width: 180px;
+    height: 55px;
+    }
 }
 
 .btn-load-more {

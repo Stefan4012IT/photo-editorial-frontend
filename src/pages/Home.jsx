@@ -26,9 +26,9 @@ const Home = () => {
             <div className="hero-container">
                 <div className="container-left">
                   <div className="navigation">
-                    <div className="nav-box nav-box-1"><a href="#"><h2 className='titles'>ABOUT</h2></a></div>
-                    <div className="nav-box nav-box-2"><a href="#" className=''><h2 className='titles'>EDITORIALS</h2></a></div>
-                    <div className="nav-box nav-box-3"><a href="#"><h2 className='titles'>CONTACTS</h2></a></div>
+                    <div className="nav-box nav-box-1"><a href="#"><h2 className='nav-titles'>ABOUT</h2></a></div>
+                    <div className="nav-box nav-box-2"><a href="#" className=''><h2 className='nav-titles'>EDITORIALS</h2></a></div>
+                    <div className="nav-box nav-box-3"><a href="#"><h2 className='nav-titles'>CONTACTS</h2></a></div>
                   </div>
                 </div>
                 <div className="container-right">

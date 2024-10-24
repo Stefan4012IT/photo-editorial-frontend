@@ -5,6 +5,10 @@
     @media only screen and (max-width: 100rem) { //1600px
       max-width: 70rem; //1120px;
     }
+
+    @media only screen and (max-width: 75rem) { //1200px
+      max-width: 52.5rem; //840px;
+    }
   }
 
   .container-content {
@@ -13,4 +17,13 @@
     @media only screen and (max-width: 100rem) { //1600px
       max-width: 60rem; //960px;
     }
+
+    @media only screen and (max-width: 75rem) { //1200px
+      max-width: 45rem; //840px; //720px
+      margin: 0 auto;
+    }
+
+    @media only screen and (max-width: 52.5rem) { //840px
+      max-width: 100%;
+    } 
   }

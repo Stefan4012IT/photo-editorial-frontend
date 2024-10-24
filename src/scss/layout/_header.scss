@@ -4,6 +4,10 @@
 :root {
     --header-margin: 3.75rem; /* 60px u rem */
     --header-height: 5.625rem; /* 90px u rem */
+
+    @media only screen and (max-width: 52.5rem) { //840px
+      --header-margin: 0rem;
+    } 
   }
 
 .header {
@@ -11,30 +15,31 @@
     margin-top: var(--header-margin);
     height: var(--header-height);
     border: 2px solid black;
-    
+
+    @media only screen and (max-width: 52.5rem) { //840px
+      border-top: none;
+      border-right: none;
+      border-left: none;
+    } 
     
 
     .header-container {
-      max-width: 72.5rem; //1160px 
       height: 100%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      @media only screen and (max-width: 100rem) { //1600px
-        max-width: 60rem; //960px;
-      }
+      @media only screen and (max-width: 52.5rem) { //840px
+        @include grid-layout(12);
+      } 
     }
   
-      h1.title {
-        font-size: 1.75rem;
-        font-family: $font-title !important;
-        font-weight: 800;
+      h1.head-title {
 
-        @media only screen and (max-width: 100rem) { //1600px
-          font-size: 1.625rem; // 26px;
-        }
+        @media only screen and (max-width: 52.5rem) { //840px
+          grid-column: 2/10;
+        } 
       }
   
       .circle { 
@@ -46,6 +51,15 @@
         height: 3.125rem; /* 50px prečnik */
         background-color: black;
         border-radius: 50%;
+
+        @media only screen and (max-width: 52.5rem) { //840px
+          grid-column: 11/12;
+        } 
+
+        @media only screen and (max-width: 31.25rem) { //500px
+          width: 1.5625rem !important; /* 25px prečnik */
+          height: 1.5625rem !important; /* 25px prečnik */
+        }
       }
     
   }

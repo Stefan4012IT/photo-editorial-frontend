@@ -9,7 +9,17 @@
   grid-gap: 0 $gap;
 
   @media only screen and (max-width: 100rem) { //1600px
-    grid-template-columns: repeat($columns, 3.125rem);
-    grid-gap: 0 1.875rem;
+    grid-template-columns: repeat($columns, 3.125rem); // 80px
+    grid-gap: 0 1.875rem; // 30px
+  }
+
+  @media only screen and (max-width: 75rem) { //1200px
+    grid-template-columns: repeat($columns, 2.5rem); // 60px
+    grid-gap: 0 1.25rem; //20px
+  }
+
+  @media only screen and (max-width: 52.5rem) { //840px
+    grid-template-columns: repeat($columns, 1fr); // 60px
+    grid-gap: 0; 
   }
 }
