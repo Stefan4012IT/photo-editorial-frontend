@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/photo-editorial-frontend/static/css/main.612e425a.css",
-    "main.js": "/photo-editorial-frontend/static/js/main.c8e915bb.js",
+    "main.css": "/photo-editorial-frontend/static/css/main.9c2b30a5.css",
+    "main.js": "/photo-editorial-frontend/static/js/main.45fec031.js",
     "static/media/above_footer_2.1.jpg": "/photo-editorial-frontend/static/media/above_footer_2.1.af89f5bd567a002080bf.jpg",
     "static/media/edotorial_1.1.jpg": "/photo-editorial-frontend/static/media/edotorial_1.1.d97c36c4a469d51e69f6.jpg",
     "static/media/edotorial_3.1.jpg": "/photo-editorial-frontend/static/media/edotorial_3.1.a384d74eb46e4d6f6378.jpg",
@@ -9,11 +9,11 @@
     "static/media/profile_pic_trail.jpg": "/photo-editorial-frontend/static/media/profile_pic_trail.303f5f9901af84a1d1aa.jpg",
     "static/media/Ostrovsky-Bold_0.otf": "/photo-editorial-frontend/static/media/Ostrovsky-Bold_0.b6b89e3136377b9ab418.otf",
     "index.html": "/photo-editorial-frontend/index.html",
-    "main.612e425a.css.map": "/photo-editorial-frontend/static/css/main.612e425a.css.map",
-    "main.c8e915bb.js.map": "/photo-editorial-frontend/static/js/main.c8e915bb.js.map"
+    "main.9c2b30a5.css.map": "/photo-editorial-frontend/static/css/main.9c2b30a5.css.map",
+    "main.45fec031.js.map": "/photo-editorial-frontend/static/js/main.45fec031.js.map"
   },
   "entrypoints": [
-    "static/css/main.612e425a.css",
-    "static/js/main.c8e915bb.js"
+    "static/css/main.9c2b30a5.css",
+    "static/js/main.45fec031.js"
   ]
 }
