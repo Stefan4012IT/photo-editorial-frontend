@@ -5,6 +5,7 @@ import NoiseBackgroundLight from './NoiseBackgroundLight';
 import NoiseBackgroundDark from './NoiseBackgroundDark';
 import NoiseBackgroundVelvet from './NoiseBackgroundVelvet';
 import MenuCircleBox from './MenuCircleBox';
+import MenuLanguageBox from './MenuLanguageBox';
 
 const Header = () => {
   const { theme } = useContext(ThemeContext);
@@ -13,10 +14,14 @@ const Header = () => {
     <header className="header container">
       <div className="header-container container-content">
         <h1 className='grid-item head-title'>PHOTO EDITORIAL</h1>
+
+        <div className="menu-items">
+        <div className="language-box">
+          <span className='lang-text'>ENG</span>
+        </div>
         <div className="circle-main-box">
           <div className="circle main-circle">
             <div className="first-half">
-              {/* <NoiseBackgroundLight /> */}
               {
             theme === 'light' ? (
                 <NoiseBackgroundLight />
@@ -32,7 +37,6 @@ const Header = () => {
             }
             </div>
             <div className="second-half">
-              {/* <NoiseBackgroundDark /> */}
               {
             theme === 'light' ? (
                 <NoiseBackgroundDark />
@@ -50,6 +54,8 @@ const Header = () => {
           </div>
         </div>
         <MenuCircleBox />
+        <MenuLanguageBox />
+        </div>
         
         
       </div>

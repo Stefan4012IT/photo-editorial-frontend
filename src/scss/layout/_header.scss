@@ -44,6 +44,60 @@
         } 
       }
 
+      .menu-items {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        
+        .language-box {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          
+          &:hover {
+            cursor: pointer;
+          }
+
+          .lang-text {
+            font-size: 28px;
+          }
+
+          &:hover~.menu-language-box {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      .menu-language-box {
+        position: absolute;
+        width: auto;
+        height: var(--header-height);
+        border: 1px solid $border-color-first;
+        border-top: 2px solid $border-color-first;
+        right: 0%;
+        top: 100%;
+        margin-right: 170px;
+        transform: translateY(-0%);
+        display: flex;
+        z-index: 10000;
+        opacity: 1;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .lang-text {
+          font-size: 28px;
+          padding: 0 20px;
+        }
+      }
+
       .circle-main-box {
         height: 100%;
         display: flex;
