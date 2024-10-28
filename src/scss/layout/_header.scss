@@ -14,7 +14,7 @@
     position: relative;
     margin-top: var(--header-margin);
     height: var(--header-height);
-    border: 2px solid black;
+    border: 2px solid $border-color-first;
 
     @media only screen and (max-width: 52.5rem) { //840px
       border-top: none;
@@ -37,20 +37,83 @@
   
       h1.head-title {
 
+        color: $text-color-first;
+
         @media only screen and (max-width: 52.5rem) { //840px
           grid-column: 2/10;
         } 
       }
+
+      .circle-main-box {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          cursor: pointer;
+
+        }
+
+        &:hover~.menu-circle-box {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        &:hover .circle {
+          cursor: pointer;
+          border: 1px solid transparent;
+          .first-half,
+          .second-half {
+            animation: rotatio-cicrle 1s forwards;
+          } 
+          
+        }
+
+        &:not(:hover) .circle{
+          transition: border .5s .5s;
+          .first-half,
+          .second-half {
+            animation: rotatio-cicrle-reverse 1s forwards;
+          } 
+        }
+      }
   
       .circle { 
+        position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         justify-self: end;
         width: 3.125rem; /* 50px prečnik */
         height: 3.125rem; /* 50px prečnik */
-        background-color: black;
         border-radius: 50%;
+        border: 1px solid $border-color-first;
+        visibility: visible;
+        
+        
+        
+        .first-half,
+        .second-half {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      
+        .first-half {
+          .for-the-first-half {
+            border-radius: 50%;
+            clip-path: inset(0 50% 0 0);
+          }
+          
+        }
+      
+        .second-half {
+          .for-the-second-half {
+            border-radius: 50%;
+            clip-path: inset(0 0 0 50%);
+          }
+        }
 
         @media only screen and (max-width: 52.5rem) { //840px
           grid-column: 11/12;
@@ -59,6 +122,167 @@
         @media only screen and (max-width: 31.25rem) { //500px
           width: 1.5625rem !important; /* 25px prečnik */
           height: 1.5625rem !important; /* 25px prečnik */
+        }
+      }
+
+
+      .menu-circle-box {
+        position: absolute;
+        width: auto;
+        height: var(--header-height);
+        border: 1px solid $border-color-first;
+        border-top: 2px solid $border-color-first;
+        right: 0%;
+        top: 100%;
+        margin-right: 100px;
+        transform: translateY(-0%);
+        display: flex;
+        z-index: 10000;
+        opacity: 1;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+
+        .circle-box {
+          width: auto;
+          height: 100%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .circle-text {
+            color: $border-color-first;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+          }
+        }
+
+        
+
+        .circle-dark, .circle-light, .circle-velvet, .circle-dark-velvet { 
+          position: relative;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          justify-self: end;
+          width: 3.125rem; /* 50px prečnik */
+          height: 3.125rem; /* 50px prečnik */
+          border-radius: 50%;
+          border: 1px solid $border-color-first;
+          margin: 0 15px;
+
+          &:hover {
+            cursor: pointer;
+          }
+          
+
+          .first-half,
+          .second-half {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: rotate(90deg);
+          }
+        
+          .first-half {
+            #noise-bg-light {
+              border-radius: 50%;
+              clip-path: inset(0 50% 0 0);
+            }
+            
+          }
+        
+          .second-half {
+            #noise-bg-dark {
+              border-radius: 50%;
+              clip-path: inset(0 0 0 50%);
+            }
+          }
+        }
+
+        .circle-dark {
+          .first-half {
+            #noise-bg-dark {
+              border-radius: 50%;
+              clip-path: inset(0 50% 0 0);
+            }
+            
+          }
+        
+          .second-half {
+            #noise-bg-light {
+              border-radius: 50%;
+              clip-path: inset(0 0 0 50%);
+            }
+          }
+        }
+
+        .circle-light {
+          .first-half {
+            #noise-bg-light {
+              border-radius: 50%;
+              clip-path: inset(0 50% 0 0);
+            }
+            
+          }
+        
+          .second-half {
+            #noise-bg-dark {
+              border-radius: 50%;
+              clip-path: inset(0 0 0 50%);
+            }
+          }
+        }
+
+        .circle-velvet {
+          .first-half {
+            #noise-bg-light {
+              border-radius: 50%;
+              clip-path: inset(0 50% 0 0);
+            }
+            
+          }
+        
+          .second-half {
+            #noise-bg-velvet {
+              border-radius: 50%;
+              clip-path: inset(0 0 0 50%);
+            }
+          }
+        }
+
+        .circle-dark-velvet {
+          .first-half {
+            #noise-bg-dark {
+              border-radius: 50%;
+              clip-path: inset(0 50% 0 0);
+            }
+            
+          }
+
+          .second-half {
+            #noise-bg-velvet {
+              border-radius: 50%;
+              clip-path: inset(0 0 0 50%);
+            }
+          }
+        }
+
+
+        &:hover {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        &:hover~.circle {
+          visibility: hidden;
+          opacity: 0;
+        }
+        &:not(:hover)~.circle {
+          visibility: visible;
         }
       }
     

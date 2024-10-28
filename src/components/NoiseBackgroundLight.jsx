@@ -74,7 +74,8 @@ const NoiseBackgroundCanvas = () => {
         height: '100%',
         zIndex: -1
       }}
-      className='noiseBackgroundLight'
+      className='noiseBackgroundLight for-the-first-half for-the-second-half'
+      id='noise-bg-light'
     />
   );
 };

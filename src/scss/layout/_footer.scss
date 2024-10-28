@@ -8,8 +8,8 @@
         position: relative;
         margin: 0 auto;
         overflow: hidden;
-        border-left: 2px #000 solid;
-        border-right: 2px #000 solid;
+        border-left: 2px $border-color-first solid;
+        border-right: 2px $border-color-first solid;
 
         @media only screen and (max-width: 52.5rem) { //840px
             border-left: none;

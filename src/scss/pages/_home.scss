@@ -8,8 +8,8 @@
     position: relative;
     margin: 0 auto;
     overflow: hidden;
-    border-left: 2px #000 solid;
-    border-right: 2px #000 solid;
+    border-left: 2px $border-color-first solid;
+    border-right: 2px $border-color-first solid;
 
     @media only screen and (max-width: 52.5rem) { //840px
       border-left: none;
@@ -24,7 +24,7 @@
     .hero-container {
       position: relative;
       min-height: calc(100vh - var(--header-margin) - var(--header-height));
-      border-bottom: 2px #000 solid;
+      border-bottom: 2px $border-color-first solid;
       display: flex;
 
       @media only screen and (max-width: 52.5rem) { //840px
@@ -45,7 +45,7 @@
 
       .container-left {
         position: relative;
-        border-right: 1px #222 solid;
+        border-right: 1px $border-color-first solid;
         height: calc(100vh - var(--header-margin) - var(--header-height));
         width: 760px;
 
@@ -122,8 +122,8 @@
 
               
 
-              border-top: 1px solid #222;
-              border-bottom: 1px solid #222;
+              border-top: 1px solid $border-color-first;
+              border-bottom: 1px solid $border-color-first;
             }
     
             &.nav-box-3 {
@@ -133,7 +133,7 @@
                   grid-column: 4/-1;
                 }
               }
-              border-bottom: 1px solid #222;
+              border-bottom: 1px solid $border-color-first;
             }
           }
         }
@@ -346,43 +346,37 @@
             align-items: flex-start;
           } 
 
-          .first-img {
-            height: 100%;
-          }
-  
-          .second-img {
-            height: 100%;
-          }
-  
-          .third-img {
-            height: 100%;
-          }
-  
-          .first-img, .third-img {
+          .first-img, .second-img, .third-img {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 360px;
+            height: 360px;
 
-            // @media only screen and (max-width: 25rem) { //400px
-            //   @include grid-layout(12);
-
-            // } 
-
-
-            img {
-              width: 360px;
-              height: 540px;
+            &:hover {
+              cursor: pointer;
+              .album-overlay {
+                animation: overlay-move-bottom-to-top .5s forwards;
+              }
+              h4{
+                animation: overlay-title .2s forwards .5s;
+              }
+            }
 
               @media only screen and (max-width: 100rem) { //1600px
                 width: 300px;
-                height: 450px;
+                height: 300px;
               }
 
               @media only screen and (max-width: 75rem) { //1200px
                 width: 220px;
-                height: 330px;
+                height: 220px;
               }
 
               @media only screen and (max-width: 52.5rem) { //840px
                 width: 360px;
-                height: 540px;
+                height: 360px;
               }
 
               @media only screen and (max-width: 31.25rem) { //500px
@@ -394,6 +388,37 @@
                 width: 100%;
                 height: auto;
               } 
+
+            .album-overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 0;
+              background-color: #000;
+              opacity: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #DDD;
+              z-index: 1;
+            }
+            
+            h4 {
+              position: absolute;
+              color: #FFF;
+              z-index: 1000;
+              opacity: 0;
+            }
+          }
+  
+          .first-img, .second-img, .third-img {
+            
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
             }
 
             
@@ -407,21 +432,21 @@
 
             img {
               width: 360px;
-              height: 490px;
+              height: 360px;
 
               @media only screen and (max-width: 100rem) { //1600px
                 width: 300px;
-                height: 410px;
+                height: 300px;
               }
 
               @media only screen and (max-width: 75rem) { //1200px
                 width: 220px;
-                height: 300px;
+                height: 220px;
               }
 
               @media only screen and (max-width: 52.5rem) { //840px
                 width: 360px;
-                height: 540px;
+                height: 360px;
               }
 
               @media only screen and (max-width: 31.25rem) { //500px
@@ -441,14 +466,14 @@
 
         .btn-editorials-container {
           width: 100%;
-          padding: 20px 0 50px 0;
+          padding: 30px 0 30px 0;
 
           @media only screen and (max-width: 75rem) { //1200px
-            padding: 10px 0 40px 0;
+            padding: 30px 0 30px 0;
           }
 
           @media only screen and (max-width: 52.5rem) { //840px
-            padding: 40px 0 40px 0;
+            padding: 30px 0 30px 0;
           }
 
           .btn-editorials {
@@ -485,7 +510,7 @@
 
     .section-contact-container {
       margin: 0 auto;
-      color: #D9D9D9;
+      
 
       @media only screen and (max-width: 31.25rem) { //500px
         @include grid-layout(12);
@@ -494,7 +519,7 @@
 
       .body-text {
         padding: 0 100px;
-
+        color: $text-color-second;
         @media only screen and (max-width: 100rem) { //1600px
           padding: 0 80px;
         }
@@ -516,6 +541,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        color: $text-color-second;
 
         @media only screen and (max-width: 100rem) { //1600px
           padding-top: $margin-second-medium;
@@ -557,7 +583,7 @@
         input,
         textarea {
           background-color: transparent;
-          border: 1px solid #D9D9D9; 
+          border: 1px solid $text-color-second; 
           color: #D9D9D9; 
           padding: 10px; 
           font-size: 1rem; 
@@ -572,7 +598,7 @@
         input:focus,
         textarea:focus {
           outline: none; 
-          border-color: #FFF; 
+          border-color: $text-color-second; 
         }
 
         #email {

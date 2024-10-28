@@ -1,6 +1,8 @@
+@import '../base/variables';
+
 .btn-editorials {
-    width: 3.4375rem; //55px
-    height: 3.4375rem; //55px
+    width: 2.8125rem; //45px
+    height: 2.8125rem; //45px
 
     @media only screen and (max-width: 75rem) { //1600px
         width: 2.8125rem; // 45px
@@ -17,10 +19,8 @@
         grid-template-rows: repeat(2, 20px);
         grid-gap: 5px;
         transition: all .3s;
-        border-top: transparent 1px solid;
-        border-right: transparent 1px solid;
-        height: 3.4375rem;
-        width: 3.4375rem;
+        width: 2.8125rem; //45px
+        height: 2.8125rem; //45px
 
         @media only screen and (max-width: 75rem) { //1600px
             width: 1.25rem; // 20px
@@ -28,7 +28,7 @@
         }
 
         .anime-text {
-            color: #000;
+            color: $text-color-first;
             font-size: 18px;
             position: absolute;
             left: 50%;
@@ -37,7 +37,7 @@
             z-index: 1000;
             visibility: visible;
             opacity: 0;
-            margin-top: -15px;
+            margin-top: -5px;
 
             @media only screen and (max-width: 75rem) { //1600px
                 font-size: 1rem;
@@ -65,7 +65,7 @@
         }
 
         .one, .two, .three, .four {
-            background-color: #000;
+            background-color: $theme-color-opposite;
         }
 
         .one {
@@ -128,22 +128,6 @@
     }
 
 
-@keyframes border-top {
-    0%{
-        border-top: transparent 1px solid;
-    } 100% {
-        border-top: #000 1px solid;
-    }
-}
-
-@keyframes border-right {
-    0%{
-        border-right: transparent 1px solid;
-    } 100% {
-        border-right: #000 1px solid;
-    }
-}
-
 @keyframes after-rotation {
     0%{
         background-color: transparent;
@@ -173,12 +157,8 @@
 
 .btn-load-more {
     
-    background-color: #000;
-
-    
-
     .btn-text {
-        color: #FFF;
+        color: $text-color-second;
     }
 
     &:hover {
@@ -193,7 +173,7 @@
     }
 
     .btn-text {
-        color: #000;
+        color: $text-color-first;
         z-index: 1000;
     }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import NoiseBackgroundLight from '../components/NoiseBackgroundLight';
 import Header from '../components/Header';
 import profilImg from '../assets/img/profile_pic_trail.jpg';
@@ -13,13 +13,29 @@ import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
 import NoiseBackgroundCanvas from '../components/NoiseBackgroundCanvas';
 import ButtonSend from '../components/ButtonSend';
 import Footer from '../components/Footer';
+import NoiseBackground from '../components/NoiseBackground';
+import { ThemeContext } from '../context/ThemeContext';
 
 const Home = () => {
+    const { theme } = useContext(ThemeContext);
+
     return (
         <>
-        <NoiseBackgroundLight />
+        {
+          theme === 'light' ? (
+            <NoiseBackgroundLight />
+          ) : theme === 'dark' ? (
+            <NoiseBackgroundDark />
+          ) : theme === 'velvet' ? (
+            <NoiseBackgroundLight />
+          ) : theme === 'dark-velvet' ? (
+            <NoiseBackgroundDark />
+          ) : (
+            null
+          )
+        }
+        {/* <NoiseBackgroundLight /> */}
         {/* <NoiseBackgroundCanvas/> */}
-        
         <Header />
         <div className="home">
           <div className="home-container container">
@@ -61,12 +77,21 @@ const Home = () => {
                 <div className="editorials">
                   <div className="first-img">
                     <img src={editorial_1} alt="Album 1" />
+                    <div className="album-overlay">
+                    </div>
+                    <h4 className='overlay-title'>Noon at forest</h4>
                   </div>
                   <div className="second-img">
                     <img src={editorial_2} alt="Album 2" />
+                    <div className="album-overlay">
+                    </div>
+                    <h4 className='overlay-title'>Autumn settles over Northen Europe</h4>
                   </div>
                   <div className="third-img">
                     <img src={editorial_3} alt="Album 3" />
+                    <div className="album-overlay">
+                    </div>
+                    <h4 className='overlay-title'>It's not all about dust</h4>
                   </div>
                 </div>
                 
@@ -83,8 +108,19 @@ const Home = () => {
             
           </div>
           <div className="section-contact">
-            <NoiseBackgroundDark />
-            {/* <NoiseBackgroundVelvet /> */}
+            {
+              theme === 'light' ? (
+                <NoiseBackgroundDark />
+              ) : theme === 'dark' ? (
+                <NoiseBackgroundLight />
+              ) : theme === 'velvet' ? (
+                <NoiseBackgroundVelvet />
+              ) : theme === 'dark-velvet' ? (
+                <NoiseBackgroundVelvet />
+              ) : (
+                null
+              )
+            }
             <div className="section-contact-container container">
               <p className='body-text'>Feel free to reach out with any questions or curiosities; no matter how big or small, I welcome every inquiry with the same open lens through which I see the world.</p>
 

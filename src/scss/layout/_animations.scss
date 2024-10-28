@@ -1,0 +1,40 @@
+@import '../base/variables';
+
+@keyframes overlay-move-bottom-to-top {
+    0% {
+        top: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: 100%;
+        opacity: .3;
+    }
+}
+
+@keyframes overlay-title {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotatio-cicrle {
+    0%{
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(450deg) scale(0);
+    }
+}
+
+@keyframes rotatio-cicrle-reverse {
+    0%{
+        transform: rotate(450deg) scale(0);
+    }
+    100% {
+        transform: rotate(0) scale(1);
+    }
+}

@@ -31,17 +31,3 @@
       }
     }
   }
-  
-  // Sada generišemo klase za specifične breakpointove (sm, md, lg, xl)
-  @each $breakpoint, $size in $breakpoints {
-    @media (min-width: #{$size}) {
-      @for $start from 1 through 12 {
-        @for $end from $start + 1 through 13 {
-          .grid-item-#{$breakpoint}-#{$start}-to-#{$end} {
-            grid-column: #{$start} / #{$end}; 
-            grid-row: 1/1;
-          }
-        }
-      }
-    }
-  }

@@ -7,6 +7,7 @@ body {
 p.body-text {
   font-size: 1.625rem; // 26px
   font-family: $font-paragraphs;
+  color: $text-color-first;
   @media only screen and (max-width: 100rem) { //1600px
     font-size: 1.4375rem; // 23px;
   }
@@ -24,6 +25,14 @@ p.body-text {
   } 
 }
 
+p.form-label {
+  color: $text-color-second;
+}
+
+span.name {
+  color: $text-color-first;
+}
+
 p.form-label, span.name {
   font-size: 1.25rem; //20px
 
@@ -35,6 +44,7 @@ p.form-label, span.name {
 h2.titles, h2.nav-titles {
   font-size: 2.625rem; //42px
   font-weight: 500;
+  color: $text-color-first;
 
   @media only screen and (max-width: 100rem) { //1600px
     font-size: 2.375rem; //38px;
@@ -70,6 +80,7 @@ span.btn-text {
 .footer-subtitle {
   font-size: 1.75rem; // 28px
   font-weight: 400;
+  color: $text-color-first;
 
   @media only screen and (max-width: 100rem) { //1600px
     font-size: 1.625rem; // 26px;
@@ -90,4 +101,14 @@ h1.head-title {
     font-size: 1.4375rem; // 23px;
   } 
 
+}
+
+h4.overlay-title {
+  font-size: 1.75rem; // 28px
+  text-align: center;
+  font-weight: 300;
+
+  @media only screen and (max-width: 100rem) { //1600px
+    font-size: 1.625rem; // 26px;
+  }
 }

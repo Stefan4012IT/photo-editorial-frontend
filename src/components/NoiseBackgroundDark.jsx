@@ -6,34 +6,61 @@ const NoiseBackgroundDark = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
 
-    const generateVelvetNoise = () => {
-      const imageData = ctx.createImageData(width, height);
-      
-      // Osnovne RGB vrednosti za boju #33191a (R: 51, G: 25, B: 26) 0 25 26 --- tirkizna, zapamti; rgb(237,243,237)
-      const baseR = 25;
-      const baseG = 25;
-      const baseB = 25;
+    // Funkcija koja vraća celu visinu stranice
+    const calculateFullPageHeight = () => {
+      return document.documentElement.scrollHeight; // Visina cele stranice, uključujući sve sekcije
+    };
+
+    const resizeCanvas = () => {
+      const width = window.innerWidth;
+      const height = calculateFullPageHeight(); // Koristimo celu visinu stranice
+      canvas.width = width;
+      canvas.height = height;
+
+      // Kreiranje male površine za noise pattern
+      const noiseCanvas = document.createElement('canvas');
+      const noiseCtx = noiseCanvas.getContext('2d');
+      const noiseSize = 100; // Fiksirana veličina noise patterna
+      noiseCanvas.width = noiseSize;
+      noiseCanvas.height = noiseSize;
+
+      // Generisanje noise patterna
+      const generateNoisePattern = () => {
+        const imageData = noiseCtx.createImageData(noiseSize, noiseSize);
+        const baseR = 25;
+        const baseG = 25;
+        const baseB = 25;
 
       for (let i = 0; i < imageData.data.length; i += 4) {
         const randomOffset = Math.random() * 20 - 10; // Varijacija od -10 do +10
         imageData.data[i] = baseR + randomOffset; // Red
         imageData.data[i + 1] = baseG + randomOffset; // Green
         imageData.data[i + 2] = baseB + randomOffset; // Blue
-        imageData.data[i + 3] = 255; // Alpha
+        imageData.data[i + 3] = 1000; // Alpha
       }
+        noiseCtx.putImageData(imageData, 0, 0);
+      };
 
-      ctx.putImageData(imageData, 0, 0);
+      generateNoisePattern();
+
+      // Kreiraj noise pattern na glavnom canvasu
+      const drawNoise = () => {
+        const pattern = ctx.createPattern(noiseCanvas, 'repeat');
+        ctx.clearRect(0, 0, width, height); // Očisti canvas pre svakog crtanja
+        ctx.fillStyle = pattern;
+        ctx.fillRect(0, 0, width, height); // Popuni ceo ekran pattern-om
+      };
+
+      drawNoise();
     };
 
-    generateVelvetNoise();
-    window.addEventListener('resize', generateVelvetNoise);
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-    return () => window.removeEventListener('resize', generateVelvetNoise);
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+    };
   }, []);
 
   return (
@@ -47,6 +74,8 @@ const NoiseBackgroundDark = () => {
         height: '100%',
         zIndex: -1,
       }}
+      id='noise-bg-dark'
+      className='for-the-first-half for-the-second-half'
     />
   );
 };
