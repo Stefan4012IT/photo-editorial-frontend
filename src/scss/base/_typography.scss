@@ -4,7 +4,7 @@ body {
   font-family: $font-primary;
 }
 
-p.body-text {
+p.body-text, span.lang-text {
   font-size: 1.625rem; // 26px
   font-family: $font-paragraphs;
   color: $text-color-first;
@@ -99,6 +99,10 @@ h1.head-title {
 
   @media only screen and (max-width: 52.5rem) { //840px
     font-size: 1.4375rem; // 23px;
+  } 
+
+  @media only screen and (max-width: 31.25rem) { //500px
+    font-size: 1.25rem; // 20px;
   } 
 
 }

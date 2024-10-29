@@ -60,7 +60,7 @@
           }
 
           .lang-text {
-            font-size: 28px;
+            //font-size: 28px;
           }
 
           &:hover~.menu-language-box {
@@ -87,13 +87,17 @@
         display: flex;
         align-items: center;
 
+        @media only screen and (max-width: 31.25rem) { //500px
+          margin-right: 0px;
+        } 
+
         &:hover {
           opacity: 1;
           visibility: visible;
         }
 
         .lang-text {
-          font-size: 28px;
+          //font-size: 28px;
           padding: 0 20px;
         }
       }
@@ -196,6 +200,10 @@
         visibility: hidden;
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: 31.25rem) { //500px
+          margin-right: 0px;
+        } 
 
         .circle-box {
           width: auto;
