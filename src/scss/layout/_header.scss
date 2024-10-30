@@ -196,11 +196,11 @@
         transform: translateY(-0%);
         display: flex;
         z-index: 10000;
-        opacity: 1;
         visibility: hidden;
         display: flex;
         align-items: center;
-
+        opacity: 0;
+        transition: opacity .75s;
         @media only screen and (max-width: 31.25rem) { //500px
           margin-right: 0px;
         } 

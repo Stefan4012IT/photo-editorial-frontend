@@ -6,6 +6,7 @@ import editorial_1 from '../assets/img/edotorial_1.1.jpg';
 import editorial_2 from '../assets/img/edotorial_2.1.jpg';
 import editorial_3 from '../assets/img/edotorial_3.1.jpg';
 import aboveFooter from '../assets/img/above_footer_2.1.jpg';
+import { motion } from "framer-motion";
 import ButtonEditorials from '../components/ButtonEditorials';
 import ButtonLoadMore from '../components/ButtonLoadMore';
 import NoiseBackgroundDark from '../components/NoiseBackgroundDark';
@@ -42,22 +43,65 @@ const Home = () => {
             <div className="hero-container">
                 <div className="container-left">
                   <div className="navigation">
-                    <div className="nav-box nav-box-1"><a href="#"><h2 className='nav-titles'>ABOUT</h2></a></div>
-                    <div className="nav-box nav-box-2"><a href="#" className=''><h2 className='nav-titles'>EDITORIALS</h2></a></div>
-                    <div className="nav-box nav-box-3"><a href="#"><h2 className='nav-titles'>CONTACTS</h2></a></div>
+                    <div className="nav-box nav-box-1">
+                      <a href="#">
+                        <motion.h2 
+                          initial={{ opacity: 0, x: -250 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: 0 }}
+                          className='nav-titles'>
+                            ABOUT
+                        </motion.h2>
+                      </a>
+                    </div>
+                    <div className="nav-box nav-box-2">
+                      <a href="#" className=''>
+                        <motion.h2 
+                          initial={{ opacity: 0, x: -250 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: 0.3 }}
+                          className='nav-titles'>
+                          EDITORIALS
+                        </motion.h2>
+                      </a>
+                    </div>
+                    <div className="nav-box nav-box-3">
+                      <a href="#">
+                        <motion.h2 
+                          initial={{ opacity: 0, x: -250 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: 0.6 }}
+                          className='nav-titles'>
+                          CONTACTS
+                        </motion.h2>
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div className="container-right">
                   <div className="text-box-hero">
-                    <p className='body-text'>
+                    <motion.p 
+                    initial={{ opacity: 0, x: 250 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className='body-text'>
                     The moment you think you understand a great work of art, it’s dead for you.<br/>
                     True art eludes complete comprehension, for it is meant to provoke thought, evoke emotion, and stir the depths of the soul. 
-                    </p>
+                    </motion.p>
                   </div>
                 </div>
               
             </div>
-            <div className="section-about container-content">
+            <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay:0.3 }}
+            className="section-about container-content">
                 <h2 className='titles'>ABOUT</h2>
                 <div className="about-content-box">
                   <div className="profil-img">
@@ -70,8 +114,13 @@ const Home = () => {
                   </div>
                 </div>
                 
-            </div>
-            <div className="section-editorials container-content">
+            </motion.div>
+            <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay:0.3 }}
+            className="section-editorials container-content">
               <h2 className='titles'>EDITORIALS</h2>
               <div className="editorials-content-box">
                 <div className="editorials">
@@ -104,7 +153,7 @@ const Home = () => {
               </div>
               
               
-            </div>
+            </motion.div>
             
           </div>
           <div className="section-contact">
@@ -121,7 +170,12 @@ const Home = () => {
                 null
               )
             }
-            <div className="section-contact-container container">
+            <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay:0.3 }}
+            className="section-contact-container container">
               <p className='body-text'>Feel free to reach out with any questions or curiosities; no matter how big or small, I welcome every inquiry with the same open lens through which I see the world.</p>
 
               <div className="contact-form">
@@ -139,7 +193,7 @@ const Home = () => {
               </div>
               <ButtonSend />
             </div>
-            </div>
+            </motion.div>
             
             
           </div>
