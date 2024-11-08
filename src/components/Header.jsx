@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 import '../scss/layout/_header.scss';
 import NoiseBackgroundLight from './NoiseBackgroundLight';
 import NoiseBackgroundDark from './NoiseBackgroundDark';
@@ -13,7 +14,7 @@ const Header = () => {
   return (
     <header className="header container">
       <div className="header-container container-content">
-        <h1 className='grid-item head-title'>PHOTO EDITORIAL</h1>
+        <h1 className='grid-item head-title'><Link to="/">PHOTO EDITORIAL</Link></h1>
 
         <div className="menu-items">
         <div className="language-box">

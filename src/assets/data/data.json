@@ -1,0 +1,193 @@
+{
+    "editorials": [
+      {
+        "id": 1,
+        "name": {
+          "en": "Urban Landscapes",
+          "sr": "Urbani Pejzaži"
+        },
+        "description": {
+          "en": "A collection of modern urban landscapes captured during the golden hour.",
+          "sr": "Kolekcija modernih urbanih pejzaža snimljenih tokom zlatnog sata."
+        },
+        "photographer": {
+          "id": 1,
+          "name": {
+            "en": "John Doe",
+            "sr": "Jovan Do"
+          }
+        },
+        "category": {
+          "id": 1,
+          "name": {
+            "en": "Cityscape",
+            "sr": "Pejzaž Grada"
+          }
+        },
+        "date": "2024-10-15",
+        "creationDate": "2024-11-01",
+        "featuredImage": {
+          "id": 1,
+          "url": "/images/urban_landscapes.jpg",
+          "name": {
+            "en": "Golden Hour in the City",
+            "sr": "Zlatni Sat u Gradu"
+          },
+          "altTag": {
+            "en": "A beautiful urban landscape",
+            "sr": "Prelep urbani pejzaž"
+          }
+        },
+        "relatedImages": [
+          {
+            "id": 2,
+            "url": "/images/urban_landscape_2.jpg",
+            "name": {
+              "en": "Sunset Reflections",
+              "sr": "Refleksije Zalaska"
+            },
+            "altTag": {
+              "en": "Reflection of buildings during sunset",
+              "sr": "Refleksija zgrada tokom zalaska"
+            }
+          },
+          {
+            "id": 3,
+            "url": "/images/urban_landscape_3.jpg",
+            "name": {
+              "en": "Night Skyline",
+              "sr": "Noćni Horizont"
+            },
+            "altTag": {
+              "en": "City skyline at night",
+              "sr": "Horizont grada noću"
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Nature's Silence",
+          "sr": "Tišina Prirode"
+        },
+        "description": {
+          "en": "Exploring the untouched beauty of nature in its most serene form.",
+          "sr": "Istraživanje netaknute lepote prirode u njenom najmirnijem obliku."
+        },
+        "photographer": {
+          "id": 2,
+          "name": {
+            "en": "Emily Clark",
+            "sr": "Emili Klark"
+          }
+        },
+        "category": {
+          "id": 2,
+          "name": {
+            "en": "Nature",
+            "sr": "Priroda"
+          }
+        },
+        "date": "2024-09-10",
+        "creationDate": "2024-11-02",
+        "featuredImage": {
+          "id": 4,
+          "url": "/images/nature_silence.jpg",
+          "name": {
+            "en": "Quiet Lake",
+            "sr": "Tiho Jezero"
+          },
+          "altTag": {
+            "en": "A peaceful lake surrounded by trees",
+            "sr": "Mirno jezero okruženo drvećem"
+          }
+        },
+        "relatedImages": [
+          {
+            "id": 5,
+            "url": "/images/nature_silence_2.jpg",
+            "name": {
+              "en": "Forest Path",
+              "sr": "Šumski Put"
+            },
+            "altTag": {
+              "en": "A path through a dense forest",
+              "sr": "Put kroz gustu šumu"
+            }
+          }
+        ]
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": {
+          "en": "Cityscape",
+          "sr": "Pejzaž Grada"
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Nature",
+          "sr": "Priroda"
+        }
+      }
+    ],
+    "photographers": [
+      {
+        "id": 1,
+        "name": {
+          "en": "John Doe",
+          "sr": "Jovan Do"
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Emily Clark",
+          "sr": "Emili Klark"
+        }
+      }
+    ],
+    "images": [
+      {
+        "id": 1,
+        "url": "/images/urban_landscapes.jpg",
+        "name": {
+          "en": "Golden Hour in the City",
+          "sr": "Zlatni Sat u Gradu"
+        },
+        "altTag": {
+          "en": "A beautiful urban landscape",
+          "sr": "Prelep urbani pejzaž"
+        }
+      },
+      {
+        "id": 2,
+        "url": "/images/urban_landscape_2.jpg",
+        "name": {
+          "en": "Sunset Reflections",
+          "sr": "Refleksije Zalaska"
+        },
+        "altTag": {
+          "en": "Reflection of buildings during sunset",
+          "sr": "Refleksija zgrada tokom zalaska"
+        }
+      },
+      {
+        "id": 3,
+        "url": "/images/urban_landscape_3.jpg",
+        "name": {
+          "en": "Night Skyline",
+          "sr": "Noćni Horizont"
+        },
+        "altTag": {
+          "en": "City skyline at night",
+          "sr": "Horizont grada noću"
+        }
+      }
+    ]
+  }
+  

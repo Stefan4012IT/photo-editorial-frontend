@@ -4,6 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { ThemeContext } from './context/ThemeContext';
 import './scss/main.scss';
 import Home from './pages/Home';
+import Editorials from './pages/Editorials';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
       <Routes>
         {/* Ruta za početnu stranicu */}
         <Route path="/" element={<Home />} />
+        <Route path="/editorials" element={<Editorials />} />
 
         {/* Dodaj druge rute ovde ako bude potrebno */}
       </Routes>

@@ -1,0 +1,38 @@
+@import '../base/variables';
+
+
+.editorials-container {
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-left: 2px $border-color-first solid;
+    border-right: 2px $border-color-first solid;
+
+    @media only screen and (max-width: 52.5rem) { //840px
+      border-left: none;
+      border-right: none;
+    } 
+
+    @media only screen and (max-width: 31.25rem) { //500px
+      height: auto;
+    } 
+
+    .editorials-content {
+        min-height: calc(100vh - var(--header-margin) - var(--header-height));
+        margin: 7.5rem auto;
+
+        .titles {
+          }
+
+        .editorials-grid {
+            @include grid-layout(12);
+            width: 100%;
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+
+}

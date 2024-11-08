@@ -1,21 +1,20 @@
 import React, { useContext } from 'react';
-import NoiseBackgroundLight from '../components/NoiseBackgroundLight';
 import Header from '../components/Header';
 import profilImg from '../assets/img/profile_pic_trail.jpg';
 import editorial_1 from '../assets/img/edotorial_1.1.jpg';
 import editorial_2 from '../assets/img/edotorial_2.1.jpg';
 import editorial_3 from '../assets/img/edotorial_3.1.jpg';
 import aboveFooter from '../assets/img/above_footer_2.1.jpg';
-import { motion } from "framer-motion";
 import ButtonEditorials from '../components/ButtonEditorials';
 import ButtonLoadMore from '../components/ButtonLoadMore';
+import NoiseBackgroundLight from '../components/NoiseBackgroundLight';
 import NoiseBackgroundDark from '../components/NoiseBackgroundDark';
 import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
-import NoiseBackgroundCanvas from '../components/NoiseBackgroundCanvas';
 import ButtonSend from '../components/ButtonSend';
 import Footer from '../components/Footer';
-import NoiseBackground from '../components/NoiseBackground';
+import { motion } from "framer-motion";
 import { ThemeContext } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const { theme } = useContext(ThemeContext);
@@ -56,16 +55,18 @@ const Home = () => {
                       </a>
                     </div>
                     <div className="nav-box nav-box-2">
-                      <a href="#" className=''>
+                      <Link to="/editorials">
                         <motion.h2 
                           initial={{ opacity: 0, x: -250 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: 0.3 }}
                           className='nav-titles'>
-                          EDITORIALS
+                          
+                            EDITORIALS
+                          
                         </motion.h2>
-                      </a>
+                      </Link>
                     </div>
                     <div className="nav-box nav-box-3">
                       <a href="#">
