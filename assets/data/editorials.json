@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Noon at forest",
+    "featuredImage": "/assets/img/edotorial_1.1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Autumn settles over Northern Europe",
+    "featuredImage": "/assets/img/edotorial_2.1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "It's not all about dust",
+    "featuredImage": "/assets/img/edotorial_3.1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Noon at forest",
+    "featuredImage": "/assets/img/edotorial_1.1.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Autumn settles over Northern Europe",
+    "featuredImage": "/assets/img/edotorial_2.1.jpg"
+  },
+  {
+    "id": 6,
+    "name": "It's not all about dust",
+    "featuredImage": "/assets/img/edotorial_3.1.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Noon at forest",
+    "featuredImage": "/assets/img/edotorial_1.1.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Autumn settles over Northern Europe",
+    "featuredImage": "/assets/img/edotorial_2.1.jpg"
+  },
+  {
+    "id": 9,
+    "name": "It's not all about dust",
+    "featuredImage": "/assets/img/edotorial_3.1.jpg"
+  }
+]
