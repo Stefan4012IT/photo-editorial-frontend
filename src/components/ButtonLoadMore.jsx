@@ -6,14 +6,14 @@ import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
 import { ThemeContext } from '../context/ThemeContext';
 import '../scss/components/_button.scss'; 
 
-const ButtonLoadMore = () => {
+const ButtonLoadMore = ({onClick}) => {
 
   const { theme } = useContext(ThemeContext);
   const { t } = useTranslation();
 
   return (
     
-    <div className="btn-load-more">
+    <div className="btn-load-more" onClick={onClick}>
         {
           theme === 'light' ? (
             <NoiseBackgroundDark />

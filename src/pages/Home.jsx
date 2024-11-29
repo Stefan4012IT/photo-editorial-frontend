@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Trans } from 'react-i18next';
 import Header from '../components/Header';
+import PREFIX from '../config';
 import profilImg from '../assets/img/profile_pic_trail.jpg';
 import editorial_1 from '../assets/img/edotorial_1.1.jpg';
 import editorial_2 from '../assets/img/edotorial_2.1.jpg';
@@ -19,10 +20,37 @@ import { ThemeContext } from '../context/ThemeContext';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+    const [editorials, setEditorials] = useState([]);
     const { theme } = useContext(ThemeContext);
     const { t } = useTranslation();
     
-    const [about, editorials, contact] = t('menu', { returnObjects: true });
+    const [about, editorials_1, contact] = t('menu', { returnObjects: true });
+
+    const [visibleEditorials, setVisibleEditorials] = useState(3); 
+    const increment = 6; 
+
+    useEffect(() => {
+      const fetchEditorials = async () => {
+        try {
+          const response = await fetch(`${PREFIX}/assets/data/editorials.json`);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.json();
+          setEditorials(data);
+        } catch (error) {
+          console.error("Error fetching editorials:", error);
+        }
+      };
+    
+      fetchEditorials();
+    }, []);
+
+    const handleLoadMore = () => {
+      setVisibleEditorials((prev) => Math.min(prev + increment, editorials.length));
+    };
+
+    const isLoadMoreVisible = visibleEditorials < editorials.length;
 
     return (
         <>
@@ -67,7 +95,7 @@ const Home = () => {
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: 0.3 }}
                           className='nav-titles'>
-                            {editorials}
+                            {editorials_1}
                         </motion.h2>
                       </Link>
                     </div>
@@ -127,32 +155,23 @@ const Home = () => {
               <h2 className='titles'>{t('aboutTitle')}</h2>
               <div className="editorials-content-box">
                 <div className="editorials">
-                  <div className="first-img">
-                    <img src={editorial_1} alt="Album 1" />
-                    <div className="album-overlay">
+                {editorials.slice(0, visibleEditorials).map((editorial, index) => (
+                    <div className={`editorial-item editorial-item-1`} key={editorial.id}>
+                      <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name} />
+                      <div className="album-overlay"></div>
+                      <h4 className="overlay-title">{editorial.name}</h4>
                     </div>
-                    <h4 className='overlay-title'>Noon at forest</h4>
-                  </div>
-                  <div className="second-img">
-                    <img src={editorial_2} alt="Album 2" />
-                    <div className="album-overlay">
-                    </div>
-                    <h4 className='overlay-title'>Autumn settles over Northen Europe</h4>
-                  </div>
-                  <div className="third-img">
-                    <img src={editorial_3} alt="Album 3" />
-                    <div className="album-overlay">
-                    </div>
-                    <h4 className='overlay-title'>It's not all about dust</h4>
-                  </div>
+                  ))}
                 </div>
                 
                 <div className="btn-editorials-container">
                   <ButtonEditorials />  
                 </div>
+                {visibleEditorials < editorials.length && (
                 <div className="btn-load-more-container">
-                  <ButtonLoadMore /> 
+                  <ButtonLoadMore onClick={handleLoadMore} /> 
                 </div>
+                )}
               </div>
               
               
