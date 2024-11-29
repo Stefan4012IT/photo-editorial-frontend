@@ -300,6 +300,10 @@
       margin: 0 auto;
       padding-bottom: 60px;
 
+      &.no-padding-bottom {
+        padding-bottom: 0; /* Kad je Load More uklonjen */
+      }
+
       @media only screen and (max-width: 52.5rem) { //840px
         @include grid-layout(12);
         grid-template-rows: auto;
@@ -339,6 +343,10 @@
           justify-content: space-between;
           flex-wrap: wrap;
           row-gap: 40px;
+
+          @media only screen and (max-width: 100rem) { //1600px
+            row-gap: 30px;
+          }
 
           @media only screen and (max-width: 52.5rem) { //840px
             flex-direction: column;

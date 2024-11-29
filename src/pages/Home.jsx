@@ -151,8 +151,10 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay:0.3 }}
-            className="section-editorials container-content">
-              <h2 className='titles'>{t('aboutTitle')}</h2>
+            className={`section-editorials container-content ${
+              !isLoadMoreVisible ? 'no-padding-bottom' : ''
+            }`}>
+              <h2 className='titles'>{t('editorialstTitle')}</h2>
               <div className="editorials-content-box">
                 <div className="editorials">
                 {editorials.slice(0, visibleEditorials).map((editorial, index) => (
