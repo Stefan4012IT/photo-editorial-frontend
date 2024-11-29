@@ -159,6 +159,7 @@
     
     .btn-text {
         color: $text-color-second;
+        text-transform: uppercase;
     }
 
     &:hover {
@@ -175,6 +176,7 @@
     .btn-text {
         color: $text-color-first;
         z-index: 1000;
+        text-transform: uppercase;
     }
 
     &:hover {

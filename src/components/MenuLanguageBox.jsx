@@ -1,11 +1,20 @@
 import React, { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '../context/ThemeContext';
+import { LanguageContext } from '../context/LanguageContext';
 import NoiseBackgroundLight from './NoiseBackgroundLight';
 import NoiseBackgroundDark from './NoiseBackgroundDark';
-import NoiseBackgroundVelvet from './NoiseBackgroundVelvet';
 
 const MenuLanguageBox = () => {
     const { setTheme, theme } = useContext(ThemeContext);
+    const { lang, setLang, availableLanguages } = useContext(LanguageContext);
+    const { i18n } = useTranslation();
+
+    const handleChangeLanguage  = (newLang) => {
+      setLang(newLang);
+      i18n.changeLanguage(newLang); // Menja jezik
+    };
+
 
   return (
     <div className="menu-language-box">
@@ -18,12 +27,18 @@ const MenuLanguageBox = () => {
       ) : theme === 'dark-velvet' ? (
         <NoiseBackgroundDark />
       ) : null}
-      <div className="lang-box">
-        <span className='lang-text'>SRB</span>
-      </div>
-      <div className="lang-box">
-        <span className='lang-text'>RUS</span>
-      </div>
+      {availableLanguages
+        .filter((language) => language.code !== lang) // Filtriramo aktivni jezik
+        .map((language) => (
+          <div
+            key={language.code}
+            className="lang-box"
+            onClick={() => handleChangeLanguage(language.code)}
+          >
+            <span className="lang-text">{language.label}</span>
+          </div>
+        ))}
+      
     </div>
   )
 }

@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import Header from '../components/Header';
 import profilImg from '../assets/img/profile_pic_trail.jpg';
 import editorial_1 from '../assets/img/edotorial_1.1.jpg';
@@ -18,6 +20,9 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     const { theme } = useContext(ThemeContext);
+    const { t } = useTranslation();
+    
+    const [about, editorials, contact] = t('menu', { returnObjects: true });
 
     return (
         <>
@@ -50,7 +55,7 @@ const Home = () => {
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: 0 }}
                           className='nav-titles'>
-                            ABOUT
+                            {about}
                         </motion.h2>
                       </a>
                     </div>
@@ -62,9 +67,7 @@ const Home = () => {
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: 0.3 }}
                           className='nav-titles'>
-                          
-                            EDITORIALS
-                          
+                            {editorials}
                         </motion.h2>
                       </Link>
                     </div>
@@ -76,7 +79,7 @@ const Home = () => {
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: 0.6 }}
                           className='nav-titles'>
-                          CONTACTS
+                            {contact}
                         </motion.h2>
                       </a>
                     </div>
@@ -90,8 +93,7 @@ const Home = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className='body-text'>
-                    The moment you think you understand a great work of art, it’s dead for you.<br/>
-                    True art eludes complete comprehension, for it is meant to provoke thought, evoke emotion, and stir the depths of the soul. 
+                    <Trans i18nKey="intro" components={{ br: <br/> }} />
                     </motion.p>
                   </div>
                 </div>
@@ -103,14 +105,14 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay:0.3 }}
             className="section-about container-content">
-                <h2 className='titles'>ABOUT</h2>
+                <h2 className='titles'>{t('aboutTitle')}</h2>
                 <div className="about-content-box">
                   <div className="profil-img">
                     <img src={profilImg} alt="Profile picture" />
                   </div>
                   <div className="about-text-content">
                     <p className='body-text'>
-                      Here, I will reveal the details and places that have not escaped my lens. I am not a professional, but a seeker of overlooked moments, capturing what others might pass by without a second glance. Through my photographs, I share the quiet corners, the subtle textures, and the fleeting instants that whisper stories. Each shot is a glimpse into my wandering eye, a collection of scenes that may seem ordinary, yet hold a beauty that waits to be discovered.
+                      {t('aboutCopy')}
                     </p>
                   </div>
                 </div>
@@ -122,7 +124,7 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay:0.3 }}
             className="section-editorials container-content">
-              <h2 className='titles'>EDITORIALS</h2>
+              <h2 className='titles'>{t('aboutTitle')}</h2>
               <div className="editorials-content-box">
                 <div className="editorials">
                   <div className="first-img">
@@ -177,20 +179,20 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay:0.3 }}
             className="section-contact-container container">
-              <p className='body-text'>Feel free to reach out with any questions or curiosities; no matter how big or small, I welcome every inquiry with the same open lens through which I see the world.</p>
+              <p className='body-text'>{t('formSectionCopy')}</p>
 
               <div className="contact-form">
               <div className="form-group">
                 <p className="form-label">
-                  Your Email:
+                {t('labelEmail')}
                 </p>
                 <input type="text" name="email" id="email" placeholder='email@example.com'/>
               </div>
               <div className="form-group">
                 <p className="form-label">
-                  Your Message:
+                {t('labelMsg')}
                 </p>
-                <textarea  rows="6" name="message" id="message" placeholder='Please enter your message...'/>
+                <textarea  rows="6" name="message" id="message" placeholder={t('placeholderMsg')}/>
               </div>
               <ButtonSend />
             </div>

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ThemeProvider } from './context/ThemeContext';
 import { ThemeContext } from './context/ThemeContext';
 import './scss/main.scss';
 import Home from './pages/Home';

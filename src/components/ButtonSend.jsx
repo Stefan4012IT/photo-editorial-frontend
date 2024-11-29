@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import { useTranslation } from 'react-i18next';
 import '../scss/components/_button.scss'; 
 import NoiseBackgroundLight from './NoiseBackgroundLight';
 import NoiseBackgroundDark from '../components/NoiseBackgroundDark';
@@ -8,6 +9,7 @@ import { ThemeContext } from '../context/ThemeContext';
 const ButtonSend = () => {
 
   const { theme } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   return (
     <div className="btn-send">
@@ -25,7 +27,7 @@ const ButtonSend = () => {
           )
         }
         <span className='btn-text'>
-            SEND
+            {t('btnSend')}
         </span>
     </div>
   );

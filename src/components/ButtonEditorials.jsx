@@ -1,7 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../scss/components/_button.scss'; 
 
 const ButtonEditorials = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="btn-editorials">
         <div className="box-btn-editorials">
@@ -9,7 +12,7 @@ const ButtonEditorials = () => {
             <div className="two"></div>
             <div className="three"></div>
             <div className="four"></div>
-            <div className="anime-text">editorials</div>
+            <div className="anime-text">{t('btnEditorial')}</div>
         </div>
     </div>
   );

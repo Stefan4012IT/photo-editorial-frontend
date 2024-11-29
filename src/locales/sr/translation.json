@@ -1,0 +1,18 @@
+{
+    "mainTitle": "Foto Editorijal",
+    "menu": ["o meni", "editorijali", "kontakt"],
+    "intro": "U trenutku kada pomislite da ste razumeli veliko umetničko delo, ono za vas umire. <br/>Prava umetnost izmiče potpunom razumevanju, jer je stvorena da izazove razmišljanje, probudi emocije i dotakne dubine duše.",
+    "aboutTitle": "o meni",
+    "aboutCopy": "Ovde ću otkriti detalje i mesta koja nisu promakla mom objektivu. Nisam profesionalac, već tragač za zanemarenim trenucima, beležeći ono što drugi možda prođu ne primetivši. Kroz svoje fotografije, delim tihe kutke, suptilne teksture i prolazne trenutke koji šapuću priče. Svaka fotografija je pogled kroz moje lutajuće oko, kolekcija scena koje mogu izgledati obično, ali u sebi kriju lepotu koja čeka da bude otkrivena.",
+    "editorialstTitle": "editorijali",
+    "btnEditorial": "editorijali",
+    "btnLoadMore": "učitaj još",
+    "btnSend": "pošalji",
+    "formSectionCopy": "Slobodno se obratite sa bilo kakvim pitanjima ili radoznalostima; bez obzira koliko velika ili mala, svako pitanje dočekujem sa istom otvorenošću s kojom posmatram svet.",
+    "labelEmail": "Vaš E-mail:",
+    "labelMsg": "Vaša Poruka:",
+    "placeholderMsg": "Molimo unesite vašu poruku...",
+    "contactTitle": "kontakt",
+    "socNetwTab": "društvene mreže",
+    "phoneTab": "telefon i e-mail"
+}

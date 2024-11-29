@@ -38,6 +38,7 @@
       h1.head-title {
 
         color: $text-color-first;
+        text-transform: uppercase;
 
         @media only screen and (max-width: 52.5rem) { //840px
           grid-column: 2/10;
@@ -59,6 +60,10 @@
             cursor: pointer;
           }
 
+          .lang-box {
+            cursor: pointer;
+          }
+
           .lang-text {
             //font-size: 28px;
           }
@@ -66,6 +71,7 @@
           &:hover~.menu-language-box {
             opacity: 1;
             visibility: visible;
+            cursor: pointer;
           }
         }
       }
@@ -86,6 +92,7 @@
         visibility: hidden;
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         @media only screen and (max-width: 31.25rem) { //500px
           margin-right: 0px;

@@ -1,0 +1,18 @@
+{
+    "mainTitle": "Photo Editorial",
+    "menu": ["about", "editorials", "contacts"],
+    "intro": "The moment you think you understand a great work of art, it’s dead for you. <br/>True art eludes complete comprehension, for it is meant to provoke thought, evoke emotion, and stir the depths of the soul.",
+    "aboutTitle": "about",
+    "aboutCopy": "Here, I will reveal the details and places that have not escaped my lens. I am not a professional, but a seeker of overlooked moments, capturing what others might pass by without a second glance. Through my photographs, I share the quiet corners, the subtle textures, and the fleeting instants that whisper stories. Each shot is a glimpse into my wandering eye, a collection of scenes that may seem ordinary, yet hold a beauty that waits to be discovered.",
+    "editorialstTitle": "editorials",
+    "btnEditorial": "editorials",
+    "btnLoadMore": "load more",
+    "btnSend": "send",
+    "formSectionCopy": "Feel free to reach out with any questions or curiosities; no matter how big or small, I welcome every inquiry with the same open lens through which I see the world.",
+    "labelEmail": "Your Email:",
+    "labelMsg": "Your Message:",
+    "placeholderMsg": "Please enter your message...",
+    "contactTitle": "contacts",
+    "socNetwTab": "social networks",
+    "phoneTab": "phone and e-mail"
+}

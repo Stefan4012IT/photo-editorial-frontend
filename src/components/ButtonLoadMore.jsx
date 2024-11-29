@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import { useTranslation } from 'react-i18next';
 import NoiseBackgroundLight from './NoiseBackgroundLight';
 import NoiseBackgroundDark from '../components/NoiseBackgroundDark';
 import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
@@ -8,6 +9,7 @@ import '../scss/components/_button.scss';
 const ButtonLoadMore = () => {
 
   const { theme } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   return (
     
@@ -26,7 +28,7 @@ const ButtonLoadMore = () => {
           )
         }
         <span className='btn-text'>
-            LOAD MORE
+            {t('btnLoadMore')}
         </span>
     </div>
   );
