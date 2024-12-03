@@ -4,6 +4,7 @@ import { ThemeContext } from './context/ThemeContext';
 import './scss/main.scss';
 import Home from './pages/Home';
 import Editorials from './pages/Editorials';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <Router basename="/photo-editorial-frontend">
+      <ScrollToTop />
       <Routes>
         {/* Ruta za početnu stranicu */}
         <Route path="/" element={<Home />} />

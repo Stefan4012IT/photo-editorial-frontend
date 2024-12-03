@@ -8,6 +8,8 @@
     overflow: hidden;
     border-left: 2px $border-color-first solid;
     border-right: 2px $border-color-first solid;
+    min-height: calc(100vh - var(--header-margin) - var(--header-height));
+    
 
     @media only screen and (max-width: 52.5rem) { //840px
       border-left: none;
@@ -18,21 +20,158 @@
       height: auto;
     } 
 
-    .editorials-content {
-        min-height: calc(100vh - var(--header-margin) - var(--header-height));
-        margin: 7.5rem auto;
+    // .editorials-content {
+        // min-height: calc(100vh - var(--header-margin) - var(--header-height));
+        // margin: 7.5rem auto;
 
-        .titles {
-          }
+        
 
-        .editorials-grid {
+        .editorials-content {
             @include grid-layout(12);
             width: 100%;
             margin-top: 60px;
             display: flex;
             flex-direction: column;
+            margin: 7.5rem auto;
+
+            @media only screen and (max-width: 52.5rem) { //840px
+              grid-row: 2/3;
+              grid-column: 2/12;
+            }
+
+            .titles {
+              text-transform: uppercase;
+              @media only screen and (max-width: 52.5rem) { //840px
+                grid-row: 1/2;
+                grid-column: 2/12;
+                justify-items: center;
+              }
+            }
+
+            .editorials-content-box {
+              
+              width: 100%;
+              margin-top: 60px;
+              display: flex;
+              flex-direction: column;
+
+              @media only screen and (max-width: 100rem) { //1600px
+                margin-top: $margin-second-medium;
+              }
+      
+              @media only screen and (max-width: 75rem) { //1200px
+                margin-top: $margin-second-small;
+              }
+      
+              @media only screen and (max-width: 52.5rem) { //840px
+                grid-row: 2/3;
+                grid-column: 2/12;
+              }
+
+              .editorials {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 40px;
+
+                @media only screen and (max-width: 100rem) { //1600px
+                  row-gap: 30px;
+                }
+
+                @media only screen and (max-width: 52.5rem) { //840px
+                  flex-direction: column;
+                  align-items: center;
+                  row-gap: 30px;
+                }
+
+                @media only screen and (max-width: 31.25rem) { //500px
+                  align-items: flex-start;
+                } 
+      
+                .editorial-item {
+                  position: relative;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 360px;
+                  height: 360px;
+      
+                  &:hover {
+                    cursor: pointer;
+                    .album-overlay {
+                      animation: overlay-move-bottom-to-top .5s forwards;
+                    }
+                    h4{
+                      animation: overlay-title .2s forwards .5s;
+                    }
+                  }
+      
+                    @media only screen and (max-width: 100rem) { //1600px
+                      width: 300px;
+                      height: 300px;
+                    }
+      
+                    @media only screen and (max-width: 75rem) { //1200px
+                      width: 220px;
+                      height: 220px;
+                    }
+      
+                    @media only screen and (max-width: 52.5rem) { //840px
+                      width: 360px;
+                      height: 360px;
+                    }
+      
+                    @media only screen and (max-width: 31.25rem) { //500px
+                      width: 100%;
+                      height: auto;
+                    } 
+      
+                    @media only screen and (max-width: 25rem) { //400px
+                      width: 100%;
+                      height: auto;
+                    } 
+      
+                  .album-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    background-color: #000;
+                    opacity: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #DDD;
+                    z-index: 1;
+                  }
+                  
+                  h4 {
+                    position: absolute;
+                    color: #FFF;
+                    z-index: 1000;
+                    opacity: 0;
+                  }
+                }
+        
+                .editorial-item {
+                  
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+      
+                  
+                }
+              }
+            }
+
+            
         }
         
-    }
+    // }
 
 }

@@ -1,11 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import '../scss/components/_button.scss'; 
+import { Link } from 'react-router-dom';
 
 const ButtonEditorials = () => {
   const { t } = useTranslation();
 
   return (
+    <Link to="/editorials">
     <div className="btn-editorials">
         <div className="box-btn-editorials">
             <div className="one"></div>
@@ -15,6 +17,8 @@ const ButtonEditorials = () => {
             <div className="anime-text">{t('btnEditorial')}</div>
         </div>
     </div>
+    </Link>
+    
   );
 };
 

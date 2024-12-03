@@ -4,9 +4,6 @@ import { Trans } from 'react-i18next';
 import Header from '../components/Header';
 import PREFIX from '../config';
 import profilImg from '../assets/img/profile_pic_trail.jpg';
-import editorial_1 from '../assets/img/edotorial_1.1.jpg';
-import editorial_2 from '../assets/img/edotorial_2.1.jpg';
-import editorial_3 from '../assets/img/edotorial_3.1.jpg';
 import aboveFooter from '../assets/img/above_footer_2.1.jpg';
 import ButtonEditorials from '../components/ButtonEditorials';
 import ButtonLoadMore from '../components/ButtonLoadMore';
@@ -17,7 +14,8 @@ import ButtonSend from '../components/ButtonSend';
 import Footer from '../components/Footer';
 import { motion } from "framer-motion";
 import { ThemeContext } from '../context/ThemeContext';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom'; 
+import { Link as ScrollLink } from 'react-scroll';
 
 const Home = () => {
     const [editorials, setEditorials] = useState([]);
@@ -67,8 +65,7 @@ const Home = () => {
             null
           )
         }
-        {/* <NoiseBackgroundLight /> */}
-        {/* <NoiseBackgroundCanvas/> */}
+
         <Header />
         <div className="home">
           <div className="home-container container">
@@ -76,19 +73,23 @@ const Home = () => {
                 <div className="container-left">
                   <div className="navigation">
                     <div className="nav-box nav-box-1">
-                      <a href="#">
-                        <motion.h2 
-                          initial={{ opacity: 0, x: -250 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: 0 }}
-                          className='nav-titles'>
-                            {about}
-                        </motion.h2>
-                      </a>
+                      <ScrollLink 
+                        to="about"
+                        smooth={true} 
+                        duration={500} 
+                        offset={-70}>
+                          <motion.h2 
+                            initial={{ opacity: 0, x: -250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0 }}
+                            className='nav-titles'>
+                              {about}
+                          </motion.h2>
+                      </ScrollLink>
                     </div>
                     <div className="nav-box nav-box-2">
-                      <Link to="/editorials">
+                      <RouterLink to="/editorials">
                         <motion.h2 
                           initial={{ opacity: 0, x: -250 }}
                           whileInView={{ opacity: 1, x: 0 }}
@@ -97,19 +98,23 @@ const Home = () => {
                           className='nav-titles'>
                             {editorials_1}
                         </motion.h2>
-                      </Link>
+                      </RouterLink>
                     </div>
                     <div className="nav-box nav-box-3">
-                      <a href="#">
-                        <motion.h2 
-                          initial={{ opacity: 0, x: -250 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: 0.6 }}
-                          className='nav-titles'>
-                            {contact}
-                        </motion.h2>
-                      </a>
+                      <ScrollLink 
+                        to="contacts"
+                        smooth={true} 
+                        duration={500} 
+                        offset={-60}>
+                          <motion.h2 
+                            initial={{ opacity: 0, x: -250 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.6 }}
+                            className='nav-titles'>
+                              {contact}
+                          </motion.h2>
+                      </ScrollLink>
                     </div>
                   </div>
                 </div>
@@ -132,7 +137,8 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay:0.3 }}
-            className="section-about container-content">
+            className="section-about container-content"
+            id='about'>
                 <h2 className='titles'>{t('aboutTitle')}</h2>
                 <div className="about-content-box">
                   <div className="profil-img">
@@ -199,7 +205,8 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay:0.3 }}
-            className="section-contact-container container">
+            className="section-contact-container container"
+            id='contacts'>
               <p className='body-text'>{t('formSectionCopy')}</p>
 
               <div className="contact-form">
