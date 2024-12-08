@@ -370,13 +370,31 @@
             width: 360px;
             height: 360px;
 
+            
+
             &:hover {
               cursor: pointer;
               .album-overlay {
                 animation: overlay-move-bottom-to-top .5s forwards;
+
+                @media only screen and (max-width: 31.25rem) { //500px
+                  animation: none;
+                } 
+  
+                @media only screen and (max-width: 25rem) { //400px
+                  animation: none;
+                } 
               }
               h4{
                 animation: overlay-title .2s forwards .5s;
+
+                @media only screen and (max-width: 31.25rem) { //500px
+                  animation: none;
+                } 
+  
+                @media only screen and (max-width: 25rem) { //400px
+                  animation: none;
+                } 
               }
             }
 
@@ -416,6 +434,18 @@
               justify-content: center;
               color: #DDD;
               z-index: 1;
+
+              @media only screen and (max-width: 31.25rem) { //500px
+                opacity: .25;
+                animation: none;
+                height: 100%;
+              } 
+  
+              @media only screen and (max-width: 25rem) { //400px
+                opacity: .25;
+                animation: none;
+                height: 100%;
+              } 
             }
             
             h4 {
@@ -423,6 +453,14 @@
               color: #FFF;
               z-index: 1000;
               opacity: 0;
+
+              @media only screen and (max-width: 31.25rem) { //500px
+                opacity: 1;
+              } 
+
+              @media only screen and (max-width: 25rem) { //400px
+                opacity: 1;
+              } 
             }
           }
   
