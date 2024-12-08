@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/photo-editorial-frontend/static/css/main.3580ba8b.css",
+    "main.css": "/photo-editorial-frontend/static/css/main.169d517b.css",
     "main.js": "/photo-editorial-frontend/static/js/main.f9ba226d.js",
     "static/media/above_footer_2.1.jpg": "/photo-editorial-frontend/static/media/above_footer_2.1.af89f5bd567a002080bf.jpg",
     "static/media/profile_pic_trail.jpg": "/photo-editorial-frontend/static/media/profile_pic_trail.303f5f9901af84a1d1aa.jpg",
     "static/media/Ostrovsky-Bold_0.otf": "/photo-editorial-frontend/static/media/Ostrovsky-Bold_0.b6b89e3136377b9ab418.otf",
     "index.html": "/photo-editorial-frontend/index.html",
-    "main.3580ba8b.css.map": "/photo-editorial-frontend/static/css/main.3580ba8b.css.map",
+    "main.169d517b.css.map": "/photo-editorial-frontend/static/css/main.169d517b.css.map",
     "main.f9ba226d.js.map": "/photo-editorial-frontend/static/js/main.f9ba226d.js.map"
   },
   "entrypoints": [
-    "static/css/main.3580ba8b.css",
+    "static/css/main.169d517b.css",
     "static/js/main.f9ba226d.js"
   ]
 }
