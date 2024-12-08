@@ -3,14 +3,16 @@ import React, { useEffect, useRef } from 'react';
 const NoiseBackgroundDark = () => {
   const canvasRef = useRef(null);
 
+  // Funkcija koja vraća celu visinu stranice
+  const calculateFullPageHeight = () => {
+    return document.documentElement.scrollHeight; // Visina cele stranice, uključujući sve sekcije
+  };
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
-    // Funkcija koja vraća celu visinu stranice
-    const calculateFullPageHeight = () => {
-      return document.documentElement.scrollHeight; // Visina cele stranice, uključujući sve sekcije
-    };
+    
 
     const resizeCanvas = () => {
       const width = window.innerWidth;

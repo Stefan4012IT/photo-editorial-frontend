@@ -20,7 +20,9 @@ import { Link as ScrollLink } from 'react-scroll';
 const Home = () => {
     const [editorials, setEditorials] = useState([]);
     const { theme } = useContext(ThemeContext);
+    const { setCurrentPage } = useContext(ThemeContext);
     const { t } = useTranslation();
+    const [isLoaded, setIsLoaded] = useState(false); // Da prati status učitavanja
     
     const [about, editorials_1, contact] = t('menu', { returnObjects: true });
 
@@ -43,6 +45,18 @@ const Home = () => {
     
       fetchEditorials();
     }, []);
+
+    useEffect(() => {
+      setCurrentPage('home'); // Postavi trenutnu stranicu
+    }, [setCurrentPage]);
+
+    useEffect(() => {
+      if (isLoaded) {
+        // Ponovni proračun visine nakon učitavanja sadržaja
+        const event = new Event('resize');
+        window.dispatchEvent(event); // Ovim simuliraš promenu veličine ekrana
+      }
+    }, [isLoaded]); // Ovo se izvršava kada su editorijali učitani
 
     const handleLoadMore = () => {
       setVisibleEditorials((prev) => Math.min(prev + increment, editorials.length));

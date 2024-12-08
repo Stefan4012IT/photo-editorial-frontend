@@ -8,7 +8,6 @@
     overflow: hidden;
     border-left: 2px $border-color-first solid;
     border-right: 2px $border-color-first solid;
-    min-height: calc(100vh - var(--header-margin) - var(--header-height));
     
 
     @media only screen and (max-width: 52.5rem) { //840px
@@ -27,7 +26,7 @@
         
 
         .editorials-content {
-            @include grid-layout(12);
+            
             width: 100%;
             margin-top: 60px;
             display: flex;
@@ -35,8 +34,9 @@
             margin: 7.5rem auto;
 
             @media only screen and (max-width: 52.5rem) { //840px
-              grid-row: 2/3;
-              grid-column: 2/12;
+              @include grid-layout(12);
+              grid-template-rows: auto;
+              
             }
 
             .titles {
@@ -124,12 +124,10 @@
       
                     @media only screen and (max-width: 31.25rem) { //500px
                       width: 100%;
-                      height: auto;
                     } 
       
                     @media only screen and (max-width: 25rem) { //400px
                       width: 100%;
-                      height: auto;
                     } 
       
                   .album-overlay {

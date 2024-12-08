@@ -6,11 +6,14 @@ import { ThemeContext } from '../context/ThemeContext';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
 
 const Editorials = () => {
   const { theme } = useContext(ThemeContext);
+  const { setCurrentPage } = useContext(ThemeContext);
   const { t } = useTranslation();
   const [editorials, setEditorials] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false); // Da prati status učitavanja
 
   useEffect(() => {
     const fetchEditorials = async () => {
@@ -21,29 +24,43 @@ const Editorials = () => {
         }
         const data = await response.json();
         setEditorials(data);
+        setIsLoaded(true); // Postavi na true kada su editorijali učitani
       } catch (error) {
         console.error("Error fetching editorials:", error);
       }
+      
     };
   
     fetchEditorials();
   }, []);
 
+  useEffect(() => {
+    setCurrentPage('editorials'); // Postavi trenutnu stranicu
+  }, [setCurrentPage]);
+
+  useEffect(() => {
+    if (isLoaded) {
+      // Ponovni proračun visine nakon učitavanja sadržaja
+      const event = new Event('resize');
+      window.dispatchEvent(event); // Ovim simuliraš promenu veličine ekrana
+    }
+  }, [isLoaded]); // Ovo se izvršava kada su editorijali učitani
+
   return (
     <>
       {
-        theme === 'light' ? (
-          <NoiseBackgroundLight />
-        ) : theme === 'dark' ? (
-          <NoiseBackgroundDark />
-        ) : theme === 'velvet' ? (
-          <NoiseBackgroundLight />
-        ) : theme === 'dark-velvet' ? (
-          <NoiseBackgroundDark />
-        ) : (
-          null
-        )
-      }
+          theme === 'light' ? (
+            <NoiseBackgroundLight />
+          ) : theme === 'dark' ? (
+            <NoiseBackgroundDark />
+          ) : theme === 'velvet' ? (
+            <NoiseBackgroundVelvet />
+          ) : theme === 'dark-velvet' ? (
+            <NoiseBackgroundVelvet />
+          ) : (
+            null
+          )
+        }
       <Header />
         <div className="editorials-container container">
           <div className="editorials-content container-content">
