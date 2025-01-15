@@ -2,46 +2,69 @@
   {
     "id": 1,
     "name": "Noon at forest",
-    "featuredImage": "/assets/img/edotorial_1.1.jpg"
+    "featuredImage": "/assets/img/edotorial_1.1.jpg",
+    "authorId": 2,
+    "categoryIds": [1, 2],
+    "images": [
+      { "path": "/assets/img/editorial_1/image1.jpg" },
+      { "path": "/assets/img/editorial_1/image2.jpg" },
+      { "path": "/assets/img/editorial_1/image3.jpg" }
+    ]
   },
   {
     "id": 2,
     "name": "Autumn settles over Northern Europe",
-    "featuredImage": "/assets/img/edotorial_2.1.jpg"
+    "featuredImage": "/assets/img/edotorial_2.1.jpg",
+    "authorId": 1,
+    "categoryIds": [1]
   },
   {
     "id": 3,
     "name": "It's not all about dust",
-    "featuredImage": "/assets/img/edotorial_3.1.jpg"
+    "featuredImage": "/assets/img/edotorial_3.1.jpg",
+    "authorId": 3,
+    "categoryIds": [3, 4]
   },
   {
     "id": 4,
     "name": "Adriatic",
-    "featuredImage": "/assets/img/edotorial_4.1.jpg"
+    "featuredImage": "/assets/img/edotorial_4.1.jpg",
+    "authorId": 2,
+    "categoryIds": [2, 4]
   },
   {
     "id": 5,
     "name": "Provance 2018",
-    "featuredImage": "/assets/img/edotorial_5.1.jpg"
+    "featuredImage": "/assets/img/edotorial_5.1.jpg",
+    "authorId": 1,
+    "categoryIds": [2]
   },
   {
     "id": 6,
     "name": "Free agent",
-    "featuredImage": "/assets/img/edotorial_6.1.jpg"
+    "featuredImage": "/assets/img/edotorial_6.1.jpg",
+    "authorId": 3,
+    "categoryIds": [4]
   },
   {
     "id": 7,
     "name": "In the middle of nowhere",
-    "featuredImage": "/assets/img/edotorial_7.1.jpg"
+    "featuredImage": "/assets/img/edotorial_7.1.jpg",
+    "authorId": 2,
+    "categoryIds": [1, 3]
   },
   {
     "id": 8,
     "name": "Old towns",
-    "featuredImage": "/assets/img/edotorial_8.1.jpg"
+    "featuredImage": "/assets/img/edotorial_8.1.jpg",
+    "authorId": 1,
+    "categoryIds": [3]
   },
   {
     "id": 9,
     "name": "City chronicle",
-    "featuredImage": "/assets/img/edotorial_9.1.jpg"
+    "featuredImage": "/assets/img/edotorial_9.1.jpg",
+    "authorId": 3,
+    "categoryIds": [3, 4]
   }
 ]

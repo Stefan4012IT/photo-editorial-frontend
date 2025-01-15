@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "bio": "An experienced travel writer.",
+      "profileImage": "/assets/img/authors/john_doe.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "bio": "A passionate nature photographer.",
+      "profileImage": "/assets/img/authors/jane_smith.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Alice Brown",
+      "bio": "Loves to document urban life.",
+      "profileImage": "/assets/img/authors/alice_brown.jpg"
+    }
+  ]
+  

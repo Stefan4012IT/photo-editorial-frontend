@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
+import { Link as RouterLink } from 'react-router-dom'; 
 
 const Editorials = () => {
   const { theme } = useContext(ThemeContext);
@@ -66,13 +67,16 @@ const Editorials = () => {
           <div className="editorials-content container-content">
             <h2 className='titles'>{t('editorialstTitle')}</h2>
             <div className="editorials-content-box">
+            
               <div className="editorials">
                 {editorials.map((editorial, index) => (
+                  <RouterLink to={`/editorial/${editorial.id}`}>
                     <div className={`editorial-item editorial-item-1`} key={editorial.id}>
                       <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name} />
                       <div className="album-overlay"></div>
                       <h4 className="overlay-title">{editorial.name}</h4>
                     </div>
+                  </RouterLink>
                   ))}
               </div>
             </div>
