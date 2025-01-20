@@ -1,70 +1,213 @@
 [
   {
     "id": 1,
-    "name": "Noon at forest",
+    "name": {
+      "en": "Noon at Forest",
+      "sr": "Podne u Šumi",
+      "ru": "Полдень в лесу"
+    },
+    "description": {
+      "en": "A serene view of the forest bathed in noon sunlight.",
+      "sr": "Mirna scena šume obasjana podnevnim suncem.",
+      "ru": "Спокойный вид на лес, залитый полуденным солнцем."
+    },
+    "date": "2023",
     "featuredImage": "/assets/img/edotorial_1.1.jpg",
     "authorId": 2,
     "categoryIds": [1, 2],
     "images": [
       { "path": "/assets/img/editorial_1/image1.jpg" },
       { "path": "/assets/img/editorial_1/image2.jpg" },
-      { "path": "/assets/img/editorial_1/image3.jpg" }
+      { "path": "/assets/img/editorial_1/image3.jpg" },
+      { "path": "/assets/img/editorial_1/image4.jpg" }
     ]
   },
   {
     "id": 2,
-    "name": "Autumn settles over Northern Europe",
+    "name": {
+      "en": "Autumn Settles Over Northern Europe",
+      "sr": "Jesen u Severnoj Evropi",
+      "ru": "Осень в Северной Европе"
+    },
+    "description": {
+      "en": "Golden hues of autumn leaves blanket the serene landscape.",
+      "sr": "Zlatne boje jesenjeg lišća prekrivaju miran pejzaž.",
+      "ru": "Золотые оттенки осенних листьев покрывают спокойный пейзаж."
+    },
+    "date": "2022",
     "featuredImage": "/assets/img/edotorial_2.1.jpg",
     "authorId": 1,
-    "categoryIds": [1]
+    "categoryIds": [1],
+    "images": [
+      { "path": "/assets/img/editorial_2/image1.jpg" },
+      { "path": "/assets/img/editorial_2/image2.jpg" },
+      { "path": "/assets/img/editorial_2/image3.jpg" },
+      { "path": "/assets/img/editorial_2/image4.jpg" }
+    ]
   },
   {
     "id": 3,
-    "name": "It's not all about dust",
+    "name": {
+      "en": "It's Not All About Dust",
+      "sr": "Nije Sve u Prašini",
+      "ru": "Это не только о пыли"
+    },
+    "description": {
+      "en": "An exploration of the intricate beauty hidden within the ordinary.",
+      "sr": "Istraživanje složene lepote skrivene u običnom.",
+      "ru": "Исследование сложной красоты, скрытой в обыденном."
+    },
+    "date": "2021",
     "featuredImage": "/assets/img/edotorial_3.1.jpg",
     "authorId": 3,
-    "categoryIds": [3, 4]
+    "categoryIds": [3, 4],
+    "images": [
+      { "path": "/assets/img/editorial_3/image1.jpg" },
+      { "path": "/assets/img/editorial_3/image2.jpg" },
+      { "path": "/assets/img/editorial_3/image3.jpg" },
+      { "path": "/assets/img/editorial_3/image4.jpg" },
+      { "path": "/assets/img/editorial_3/image5.jpg" }
+    ]
   },
   {
     "id": 4,
-    "name": "Adriatic",
+    "name": {
+      "en": "Adriatic",
+      "sr": "Jadran",
+      "ru": "Адриатическое море"
+    },
+    "description": {
+      "en": "Crystal-clear waters and the charm of coastal life.",
+      "sr": "Kristalno čista voda i šarm obalnog života.",
+      "ru": "Кристально чистая вода и очарование прибрежной жизни."
+    },
+    "date": "2020",
     "featuredImage": "/assets/img/edotorial_4.1.jpg",
     "authorId": 2,
-    "categoryIds": [2, 4]
+    "categoryIds": [2, 4],
+    "images": [
+      { "path": "/assets/img/editorial_4/image1.jpg" },
+      { "path": "/assets/img/editorial_4/image2.jpg" },
+      { "path": "/assets/img/editorial_4/image3.jpg" },
+      { "path": "/assets/img/editorial_4/image4.jpg" },
+      { "path": "/assets/img/editorial_4/image5.jpg" }
+    ]
   },
   {
     "id": 5,
-    "name": "Provance 2018",
+    "name": {
+      "en": "Provance 2018",
+      "sr": "Provansa 2018",
+      "ru": "Прованс 2018"
+    },
+    "description": {
+      "en": "The timeless beauty of Provance captured in vivid colors.",
+      "sr": "Bezvremenska lepota Provanse uhvaćena u živim bojama.",
+      "ru": "Вневременная красота Прованса, запечатленная в ярких красках."
+    },
+    "date": "2018",
     "featuredImage": "/assets/img/edotorial_5.1.jpg",
     "authorId": 1,
-    "categoryIds": [2]
+    "categoryIds": [2],
+    "images": [
+      { "path": "/assets/img/editorial_5/image1.jpg" },
+      { "path": "/assets/img/editorial_5/image2.jpg" },
+      { "path": "/assets/img/editorial_5/image3.jpg" },
+      { "path": "/assets/img/editorial_5/image4.jpg" },
+      { "path": "/assets/img/editorial_5/image5.jpg" }
+    ]
   },
   {
     "id": 6,
-    "name": "Free agent",
+    "name": {
+      "en": "Free Agent",
+      "sr": "Slobodni Agent",
+      "ru": "Свободный агент"
+    },
+    "description": {
+      "en": "A story of independence and the search for new horizons.",
+      "sr": "Priča o nezavisnosti i potrazi za novim horizontima.",
+      "ru": "История независимости и поиска новых горизонтов."
+    },
+    "date": "2019",
     "featuredImage": "/assets/img/edotorial_6.1.jpg",
     "authorId": 3,
-    "categoryIds": [4]
+    "categoryIds": [4],
+    "images": [
+      { "path": "/assets/img/editorial_6/image1.jpg" },
+      { "path": "/assets/img/editorial_6/image2.jpg" },
+      { "path": "/assets/img/editorial_6/image3.jpg" }
+    ]
   },
   {
     "id": 7,
-    "name": "In the middle of nowhere",
+    "name": {
+      "en": "In the Middle of Nowhere",
+      "sr": "Usred Nigde",
+      "ru": "В глуши"
+    },
+    "description": {
+      "en": "A quiet retreat away from the hustle of the world.",
+      "sr": "Mirno utočište daleko od gužve sveta.",
+      "ru": "Тихое убежище вдали от суеты мира."
+    },
+    "date": "2022",
     "featuredImage": "/assets/img/edotorial_7.1.jpg",
     "authorId": 2,
-    "categoryIds": [1, 3]
+    "categoryIds": [1, 3],
+    "images": [
+      { "path": "/assets/img/editorial_7/image1.jpg" },
+      { "path": "/assets/img/editorial_7/image2.jpg" },
+      { "path": "/assets/img/editorial_7/image3.jpg" }
+    ]
   },
   {
     "id": 8,
-    "name": "Old towns",
+    "name": {
+      "en": "Old Towns",
+      "sr": "Stari Gradovi",
+      "ru": "Старые города"
+    },
+    "description": {
+      "en": "Discover the charm and history of ancient towns.",
+      "sr": "Otkrijte šarm i istoriju drevnih gradova.",
+      "ru": "Откройте для себя очарование и историю древних городов."
+    },
+    "date": "2017",
     "featuredImage": "/assets/img/edotorial_8.1.jpg",
     "authorId": 1,
-    "categoryIds": [3]
+    "categoryIds": [3],
+    "images": [
+      { "path": "/assets/img/editorial_8/image1.jpg" },
+      { "path": "/assets/img/editorial_8/image2.jpg" },
+      { "path": "/assets/img/editorial_8/image3.jpg" },
+      { "path": "/assets/img/editorial_8/image4.jpg" },
+      { "path": "/assets/img/editorial_8/image5.jpg" }
+    ]
   },
   {
     "id": 9,
-    "name": "City chronicle",
+    "name": {
+      "en": "City Chronicle",
+      "sr": "Hronika Grada",
+      "ru": "Хроника города"
+    },
+    "description": {
+      "en": "Life and stories from the heart of the city.",
+      "sr": "Život i priče iz srca grada.",
+      "ru": "Жизнь и истории из сердца города."
+    },
+    "date": "2021",
     "featuredImage": "/assets/img/edotorial_9.1.jpg",
     "authorId": 3,
-    "categoryIds": [3, 4]
+    "categoryIds": [3, 4],
+    "images": [
+      { "path": "/assets/img/editorial_9/image1.jpg" },
+      { "path": "/assets/img/editorial_9/image2.jpg" },
+      { "path": "/assets/img/editorial_9/image3.jpg" },
+      { "path": "/assets/img/editorial_9/image4.jpg" },
+      { "path": "/assets/img/editorial_9/image5.jpg" },
+      { "path": "/assets/img/editorial_9/image6.jpg" }
+    ]
   }
 ]

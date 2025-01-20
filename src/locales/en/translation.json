@@ -14,5 +14,7 @@
     "placeholderMsg": "Please enter your message...",
     "contactTitle": "contacts",
     "socNetwTab": "social networks",
-    "phoneTab": "phone and e-mail"
+    "phoneTab": "phone and e-mail",
+    "photographer": "Photographer",
+    "categories": "Categories"
 }

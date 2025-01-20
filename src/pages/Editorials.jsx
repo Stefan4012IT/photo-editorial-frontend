@@ -12,7 +12,8 @@ import { Link as RouterLink } from 'react-router-dom';
 const Editorials = () => {
   const { theme } = useContext(ThemeContext);
   const { setCurrentPage } = useContext(ThemeContext);
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+  const currentLanguage = i18n.language;
   const [editorials, setEditorials] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false); // Da prati status učitavanja
 
@@ -72,9 +73,9 @@ const Editorials = () => {
                 {editorials.map((editorial, index) => (
                   <RouterLink to={`/editorial/${editorial.id}`}>
                     <div className={`editorial-item editorial-item-1`} key={editorial.id}>
-                      <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name} />
+                      <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name[currentLanguage]} />
                       <div className="album-overlay"></div>
-                      <h4 className="overlay-title">{editorial.name}</h4>
+                      <h4 className="overlay-title">{editorial.name[currentLanguage]}</h4>
                     </div>
                   </RouterLink>
                   ))}

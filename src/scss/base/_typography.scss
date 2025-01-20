@@ -33,7 +33,13 @@ span.name {
   color: $text-color-first;
 }
 
-p.form-label, span.name {
+.editorial-label {
+  color: $text-color-first;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+p.form-label, span.name, .editorial-label {
   font-size: 1.25rem; //20px
 
   @media only screen and (max-width: 100rem) { //1600px
@@ -77,7 +83,7 @@ span.btn-text {
   }
 }
 
-.footer-subtitle {
+.footer-subtitle, .info-value {
   font-size: 1.75rem; // 28px
   font-weight: 400;
   color: $text-color-first;

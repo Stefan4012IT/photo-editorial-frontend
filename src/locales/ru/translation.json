@@ -14,5 +14,7 @@
     "placeholderMsg": "Пожалуйста, введите ваше сообщение...",
     "contactTitle": "контакты",
     "socNetwTab": "социальные сети",
-    "phoneTab": "телефон и e-mail"
+    "phoneTab": "телефон и e-mail",
+    "photographer": "Фотограф",
+    "categories": "Категории"
 }

@@ -1,21 +1,41 @@
 [
-    {
-      "id": 1,
-      "name": "John Doe",
-      "bio": "An experienced travel writer.",
-      "profileImage": "/assets/img/authors/john_doe.jpg"
+  {
+    "id": 1,
+    "name": {
+      "en": "John Doe",
+      "sr": "Јован Доша",
+      "ru": "Джон Доу"
     },
-    {
-      "id": 2,
-      "name": "Jane Smith",
-      "bio": "A passionate nature photographer.",
-      "profileImage": "/assets/img/authors/jane_smith.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Alice Brown",
-      "bio": "Loves to document urban life.",
-      "profileImage": "/assets/img/authors/alice_brown.jpg"
+    "bio": {
+      "en": "An experienced travel photographer.",
+      "sr": "Искустан фотограф путовања.",
+      "ru": "Опытный фотограф путешествий."
     }
-  ]
-  
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Jane Smith",
+      "sr": "Јана Смит",
+      "ru": "Джейн Смит"
+    },
+    "bio": {
+      "en": "A nature lover and passionate explorer.",
+      "sr": "Љубитељ природе и страствени истраживач.",
+      "ru": "Любитель природы и страстный исследователь."
+    }
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Alice Brown",
+      "sr": "Алиса Браун",
+      "ru": "Алиса Браун"
+    },
+    "bio": {
+      "en": "Specializes in urban photography.",
+      "sr": "Специјализована за урбану фотографију.",
+      "ru": "Специализируется на городской фотографии."
+    }
+  }
+]

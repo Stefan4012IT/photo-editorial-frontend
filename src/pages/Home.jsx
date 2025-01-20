@@ -21,7 +21,8 @@ const Home = () => {
     const [editorials, setEditorials] = useState([]);
     const { theme } = useContext(ThemeContext);
     const { setCurrentPage } = useContext(ThemeContext);
-    const { t } = useTranslation();
+    const { i18n, t } = useTranslation();
+    const currentLanguage = i18n.language;
     const [isLoaded, setIsLoaded] = useState(false); // Da prati status učitavanja
     
     const [about, editorials_1, contact] = t('menu', { returnObjects: true });
@@ -179,9 +180,9 @@ const Home = () => {
                 <div className="editorials">
                 {editorials.slice(0, visibleEditorials).map((editorial, index) => (
                     <div className={`editorial-item editorial-item-1`} key={editorial.id}>
-                      <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name} />
+                      <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name[currentLanguage]} />
                       <div className="album-overlay"></div>
-                      <h4 className="overlay-title">{editorial.name}</h4>
+                      <h4 className="overlay-title">{editorial.name[currentLanguage]}</h4>
                     </div>
                   ))}
                 </div>

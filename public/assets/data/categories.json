@@ -1,27 +1,54 @@
 [
-    {
-      "id": 1,
-      "name": "Nature",
-      "description": "Exploring the beauty of natural landscapes.",
-      "icon": "/assets/icons/nature.png"
+  {
+    "id": 1,
+    "name": {
+      "en": "Nature",
+      "sr": "Priroda",
+      "ru": "Природа"
     },
-    {
-      "id": 2,
-      "name": "Travel",
-      "description": "Adventures and journeys around the globe.",
-      "icon": "/assets/icons/travel.png"
-    },
-    {
-      "id": 3,
-      "name": "Urban",
-      "description": "Stories from cities and urban areas.",
-      "icon": "/assets/icons/urban.png"
-    },
-    {
-      "id": 4,
-      "name": "Culture",
-      "description": "Insights into cultural practices and traditions.",
-      "icon": "/assets/icons/culture.png"
+    "description": {
+      "en": "Exploring the beauty of natural landscapes.",
+      "sr": "Istraživanje lepote prirodnih pejzaža.",
+      "ru": "Изучение красоты природных пейзажей."
     }
-  ]
-  
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Travel",
+      "sr": "Putovanja",
+      "ru": "Путешествия"
+    },
+    "description": {
+      "en": "Adventures and journeys around the globe.",
+      "sr": "Avanture i putovanja širom sveta.",
+      "ru": "Приключения и путешествия по всему миру."
+    }
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Urban",
+      "sr": "Urbano",
+      "ru": "Город"
+    },
+    "description": {
+      "en": "Discovering stories from bustling cities.",
+      "sr": "Otkriće priča iz užurbanih gradova.",
+      "ru": "Открытие историй из оживленных городов."
+    }
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Culture",
+      "sr": "Kultura",
+      "ru": "Культура"
+    },
+    "description": {
+      "en": "Insights into cultural practices and traditions.",
+      "sr": "Uvidi u kulturne običaje i tradicije.",
+      "ru": "Понимание культурных обычаев и традиций."
+    }
+  }
+]
