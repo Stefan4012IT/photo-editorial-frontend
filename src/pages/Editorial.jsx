@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
 import { useParams } from 'react-router-dom';
 import { DataContext } from '../context/DataContext';
+import { div } from 'framer-motion/client';
 
 const Editorial = () => {
   const { id } = useParams(); // Dohvaćanje ID iz URL-a
@@ -132,6 +133,15 @@ const Editorial = () => {
                     ))}
                 </div>
                  )}
+                 {editorial.date && (
+                  <div>
+                    <p className="editorial-label">{t('date')}:</p>
+                    <p className="info-value">{editorial.date}</p>
+                  </div>
+
+                 )
+
+                 }
               </div>
               
               </div>
