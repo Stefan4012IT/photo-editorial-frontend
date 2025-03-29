@@ -31,11 +31,15 @@
 
         .titles {
             text-transform: uppercase;
+
             @media only screen and (max-width: 52.5rem) { //840px
-            grid-row: 1/2;
-            grid-column: 2/12;
-            justify-items: center;
+              grid-row: 1/2;
+              grid-column: 2/12;
+              justify-items: center;
+              text-align: center;
             }
+
+
         }
 
         .editorial-featured {
@@ -45,6 +49,19 @@
             flex-direction: row;
             justify-content: space-between;
 
+            @media only screen and (max-width: 52.5rem) { //840px
+              grid-row: 1/2;
+              grid-column: 2/12;
+            }
+
+            @media only screen and (max-width: 52.5rem) { //840px
+              justify-content: flex-start;
+              flex-direction: column;
+              width: 100%;
+              row-gap: 60px;
+              margin-bottom: 60px;
+            } 
+
 
             &--image {
                 
@@ -52,6 +69,10 @@
                 height: auto;
                 // width: 360px;
                 // height: 360px;
+
+                @media only screen and (max-width: 52.5rem) { //840px
+                  width: 100%;
+                } 
             }
 
             &--info {
@@ -59,6 +80,10 @@
               display: flex;
               flex-direction: column;
               align-items: center;
+
+              @media only screen and (max-width: 52.5rem) { //840px
+                width: 100%;
+              } 
 
               &_content {
                 display: flex;
@@ -69,6 +94,10 @@
               &_box {
                 position: relative;
                 padding: 60px;
+
+                @media only screen and (max-width: 52.5rem) { //840px
+                  padding: 20px;
+                } 
 
                 .top-left {
                   position: absolute;
@@ -151,6 +180,11 @@
           row-gap: 40px;
           align-items: flex-start;
 
+          @media only screen and (max-width: 52.5rem) { //840px
+            grid-row: 3/-1;
+            grid-column: 2/12;
+          }
+
           &_singleImg {
             width: auto;
             height: auto;
@@ -161,10 +195,19 @@
 
           .wide-image {
             max-width: 50%;
+
+            @media only screen and (max-width: 52.5rem) { //840px
+              max-width: 100%;
+            }
           }
 
           .tall-image {
             max-height: 550px;
+
+            @media only screen and (max-width: 52.5rem) { //840px
+              width: 100%;
+              max-height:max-content;
+            }
           }
         }
       }
