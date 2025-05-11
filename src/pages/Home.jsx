@@ -179,11 +179,13 @@ const Home = () => {
               <div className="editorials-content-box">
                 <div className="editorials">
                 {editorials.slice(0, visibleEditorials).map((editorial, index) => (
-                    <div className={`editorial-item editorial-item-1`} key={editorial.id}>
+                  <RouterLink to={`/editorial/${editorial.id}`}>
+                    <div href='' className={`editorial-item editorial-item-1`} key={editorial.id}>
                       <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name[currentLanguage]} />
                       <div className="album-overlay"></div>
                       <h4 className="overlay-title">{editorial.name[currentLanguage]}</h4>
                     </div>
+                  </RouterLink>
                   ))}
                 </div>
                 

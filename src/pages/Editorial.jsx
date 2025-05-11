@@ -26,7 +26,6 @@ const Editorial = () => {
   const [editorialCategories, setEditorialCategories] = useState([]);
   
   useEffect(() => {
-    console.log("Editorial ID from URL:", id);
     const fetchEditorial = async () => {
       try {
         const response = await fetch(`${PREFIX}/assets/data/editorials.json`);

@@ -37,9 +37,11 @@ span.name {
   color: $text-color-first;
   text-transform: uppercase;
   font-weight: 400;
+
+  font-size: 1rem;
 }
 
-p.form-label, span.name, .editorial-label {
+p.form-label, span.name {
   font-size: 1.25rem; //20px
 
   @media only screen and (max-width: 100rem) { //1600px
@@ -91,6 +93,16 @@ span.btn-text {
   @media only screen and (max-width: 100rem) { //1600px
     font-size: 1.625rem; // 26px;
   }
+}
+
+.info-value {
+    font-size: 1.5rem; // 24px
+    font-weight: 400;
+    color: $text-color-first;
+
+    @media only screen and (max-width: 100rem) { //1600px
+      font-size: 1.5rem; // 25px;
+    }
 }
 
 
