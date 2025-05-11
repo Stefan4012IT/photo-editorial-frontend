@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/photo-editorial-frontend/static/css/main.6397e3b6.css",
-    "main.js": "/photo-editorial-frontend/static/js/main.94be8c0d.js",
+    "main.css": "/photo-editorial-frontend/static/css/main.aa285858.css",
+    "main.js": "/photo-editorial-frontend/static/js/main.b52984c1.js",
     "static/media/above_footer_2.1.jpg": "/photo-editorial-frontend/static/media/above_footer_2.1.af89f5bd567a002080bf.jpg",
     "static/media/profile_pic_trail.jpg": "/photo-editorial-frontend/static/media/profile_pic_trail.303f5f9901af84a1d1aa.jpg",
     "static/media/Ostrovsky-Bold_0.otf": "/photo-editorial-frontend/static/media/Ostrovsky-Bold_0.b6b89e3136377b9ab418.otf",
     "index.html": "/photo-editorial-frontend/index.html",
-    "main.6397e3b6.css.map": "/photo-editorial-frontend/static/css/main.6397e3b6.css.map",
-    "main.94be8c0d.js.map": "/photo-editorial-frontend/static/js/main.94be8c0d.js.map"
+    "main.aa285858.css.map": "/photo-editorial-frontend/static/css/main.aa285858.css.map",
+    "main.b52984c1.js.map": "/photo-editorial-frontend/static/js/main.b52984c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.6397e3b6.css",
-    "static/js/main.94be8c0d.js"
+    "static/css/main.aa285858.css",
+    "static/js/main.b52984c1.js"
   ]
 }

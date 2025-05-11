@@ -130,13 +130,13 @@
       "ru": "История независимости и поиска новых горизонтов."
     },
     "date": "2019",
-    "featuredImage": "/assets/img/edotorial_6.1.jpg",
+    "featuredImage": "/assets/img/editorial_6/image3.jpg",
     "authorId": 3,
     "categoryIds": [4],
     "images": [
       { "path": "/assets/img/editorial_6/image1.jpg" },
       { "path": "/assets/img/editorial_6/image2.jpg" },
-      { "path": "/assets/img/editorial_6/image3.jpg" }
+      { "path": "/assets/img/edotorial_6.1.jpg" }
     ]
   },
   {
