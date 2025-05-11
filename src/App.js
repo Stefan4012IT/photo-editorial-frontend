@@ -9,9 +9,9 @@ import Editorial from './pages/Editorial';
 
 function App() {
 
-
+const basename = process.env.PUBLIC_URL || '/';
   return (
-    <Router basename="/photo-editorial-frontend">
+    <Router basename={basename}>
       <ScrollToTop />
       <Routes>
         {/* Ruta za početnu stranicu */}
