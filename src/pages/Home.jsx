@@ -181,7 +181,7 @@ const Home = () => {
               <div className="editorials-content-box">
                 <div className="editorials">
                 {editorials.slice(0, visibleEditorials).map((editorial, index) => (
-                  <RouterLink to={`/editorial/${editorial.id}`}>
+                  <RouterLink to={`/editorial/${editorial.id}`} className='editorial-link'>
                     <div href='' className={`editorial-item editorial-item-1`} key={editorial.id}>
                       <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name[lang]} />
                       <div className="album-overlay"></div>

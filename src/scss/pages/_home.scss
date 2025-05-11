@@ -362,6 +362,11 @@
             align-items: flex-start;
           } 
 
+          a.editorial-link {
+            @media only screen and (max-width: 31.25rem) { //500px
+              width: 100%;
+            } 
+          }
           .editorial-item {
             position: relative;
             display: flex;
@@ -463,6 +468,7 @@
               } 
             }
           }
+        
   
           .editorial-item {
             
