@@ -10,8 +10,9 @@ export const LanguageProvider = ({ children }) => {
     { code: 'ru', label: 'RUS' },
   ];
 
+  const normalized = i18n.language.split('-')[0];
   const [lang, setLang] = useState(
-    availableLanguages.some((language) => language.code === i18n.language) ? i18n.language : 'en'
+    availableLanguages.some((language) => language.code === normalized) ? normalized : 'en'
   );
 
   useEffect(() => {

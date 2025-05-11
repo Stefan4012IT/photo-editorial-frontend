@@ -24,6 +24,8 @@ const Editorial = () => {
   const [imagesLoaded, setImagesLoaded] = useState(0);
   const [author, setAuthor] = useState(null);
   const [editorialCategories, setEditorialCategories] = useState([]);
+
+  const langKey = currentLanguage.split('-')[0];
   
   useEffect(() => {
     const fetchEditorial = async () => {
