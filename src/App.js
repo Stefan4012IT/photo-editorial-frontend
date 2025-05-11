@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeContext } from './context/ThemeContext';
 import './scss/main.scss';
 import Home from './pages/Home';
@@ -9,9 +9,9 @@ import Editorial from './pages/Editorial';
 
 function App() {
 
-const basename = process.env.PUBLIC_URL || '/';
+  const basename = process.env.PUBLIC_URL || '/';
   return (
-    <Router basename={basename}>
+    <Router>
       <ScrollToTop />
       <Routes>
         {/* Ruta za početnu stranicu */}
