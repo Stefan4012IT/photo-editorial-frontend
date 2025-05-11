@@ -49,7 +49,7 @@ const Footer = () => {
             </motion.div>
         </div>
         <div className="footer-section">
-          <p>&copy; 2024 photo editorial</p>
+          <p>&copy; 2024 photo editorial by Stefan Radovanović</p>
         </div>
     </div>
   )

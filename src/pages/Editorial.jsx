@@ -22,6 +22,8 @@ const Editorial = () => {
   const { authors, categories, isLoaded } = useContext(DataContext);
   const [imageClasses, setImageClasses] = useState([]);
   const [imagesLoaded, setImagesLoaded] = useState(0);
+  const [author, setAuthor] = useState(null);
+  const [editorialCategories, setEditorialCategories] = useState([]);
   
   useEffect(() => {
     console.log("Editorial ID from URL:", id);
@@ -48,6 +50,23 @@ const Editorial = () => {
     fetchEditorial();
   }, [id]);
 
+  useEffect(() => {
+  if (!editorial || !isLoaded) return;
+
+  // Pronađi autora
+  const foundAuthor = authors.find(a => a.id === editorial.authorId);
+  setAuthor(foundAuthor || null);
+
+  // Pronađi kategorije
+  const foundCategories = Array.isArray(editorial.categoryIds)
+    ? editorial.categoryIds
+        .map(categoryId => categories.find(c => c.id === categoryId))
+        .filter(Boolean)
+    : [];
+
+  setEditorialCategories(foundCategories);
+}, [editorial, authors, categories, isLoaded]);
+
   const handleImageLoad = (index, event) => {
     const img = event.target;
     const newClasses = [...imageClasses];
@@ -68,21 +87,13 @@ const Editorial = () => {
     }
   }, [imagesLoaded, editorial]);
 
-  const author = editorial ? authors.find(a => a.id === editorial.authorId) : null;
-  const editorialCategories = editorial && Array.isArray(editorial.categoryIds)
-    ? editorial.categoryIds
-        .map(categoryId => categories.find(category => category.id === categoryId))
-        .filter(category => category)
-    : [];
-
-
     if (!isLoaded || !editorial) {
       return <p>Loading...</p>;
     }
 
-  if (!isLoaded) {
-    return <p>Loading...</p>;
-  }
+    if (!isLoaded) {
+      return <p>Loading...</p>;
+    }
 
   
 
