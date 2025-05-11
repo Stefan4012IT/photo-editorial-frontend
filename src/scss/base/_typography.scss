@@ -33,14 +33,6 @@ span.name {
   color: $text-color-first;
 }
 
-.editorial-label {
-  color: $text-color-first;
-  text-transform: uppercase;
-  font-weight: 400;
-
-  font-size: 1rem;
-}
-
 p.form-label, span.name {
   font-size: 1.25rem; //20px
 
@@ -85,7 +77,7 @@ span.btn-text {
   }
 }
 
-.footer-subtitle, .info-value {
+.footer-subtitle {
   font-size: 1.75rem; // 28px
   font-weight: 400;
   color: $text-color-first;
@@ -93,6 +85,24 @@ span.btn-text {
   @media only screen and (max-width: 100rem) { //1600px
     font-size: 1.625rem; // 26px;
   }
+  
+}
+
+.editorial-label {
+  color: $text-color-first;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  font-size: 1rem;
+
+  @media only screen and (max-width: 100rem) { //1600px
+    font-size: .9rem; // 20px;
+  }
+
+  @media only screen and (max-width: 75rem) { //1200px
+    font-size: .8rem; //18px;
+  }
+
 }
 
 .info-value {
@@ -101,8 +111,13 @@ span.btn-text {
     color: $text-color-first;
 
     @media only screen and (max-width: 100rem) { //1600px
-      font-size: 1.5rem; // 25px;
+      font-size: 1.25rem; // 20px;
     }
+
+    @media only screen and (max-width: 75rem) { //1200px
+      font-size: 1.125rem; //18px;
+    }
+
 }
 
 

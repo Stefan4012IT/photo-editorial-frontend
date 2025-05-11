@@ -10,22 +10,23 @@ import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
 import { useParams } from 'react-router-dom';
 import { DataContext } from '../context/DataContext';
 import { div } from 'framer-motion/client';
+import { LanguageContext } from '../context/LanguageContext';
 
 const Editorial = () => {
   const { id } = useParams(); // Dohvaćanje ID iz URL-a
   console.log("Editorial ID from URL:", id);
   const { theme } = useContext(ThemeContext);
   const { setCurrentPage } = useContext(ThemeContext);
-  const { i18n, t } = useTranslation();
-  const currentLanguage = i18n.language;
+  const { t } = useTranslation();
+  const { lang } = useContext(LanguageContext);
   const [editorial, setEditorial] = useState(null); // Početna vrednost je null
   const { authors, categories, isLoaded } = useContext(DataContext);
   const [imageClasses, setImageClasses] = useState([]);
+  const [featuredClass, setFeaturedClass] = useState('');
   const [imagesLoaded, setImagesLoaded] = useState(0);
   const [author, setAuthor] = useState(null);
   const [editorialCategories, setEditorialCategories] = useState([]);
 
-  const langKey = currentLanguage.split('-')[0];
   
   useEffect(() => {
     const fetchEditorial = async () => {
@@ -80,6 +81,15 @@ const Editorial = () => {
     setImagesLoaded((prev) => prev + 1); // Povećaj broj učitanih slika
   };
 
+  const handleFeaturedLoad = (event) => {
+  const img = event.target;
+  if (img.naturalWidth > img.naturalHeight) {
+    setFeaturedClass('wide-image');
+  } else {
+    setFeaturedClass('tall-image');
+  }
+};
+
   useEffect(() => {
     if (imagesLoaded === editorial?.images.length) {
       // Kada su sve slike učitane, proračunaj visinu sadržaja
@@ -114,9 +124,14 @@ const Editorial = () => {
       <div>
       <div className="editorial-container container">
         <div className="editorial-content container-content">
-          <h2 className='titles'>{editorial.name[currentLanguage]}</h2>
+          <h2 className='titles'>{editorial.name[lang]}</h2>
           <div className="editorial-featured">
-            <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name[currentLanguage]} className='editorial-featured--image'/>
+            <img
+              src={`${PREFIX}/${editorial.featuredImage}`}
+              alt={editorial.name[lang]}
+              className={`editorial-featured--image ${featuredClass}`}
+              onLoad={handleFeaturedLoad}
+            />
             <div className="editorial-featured--info">
               <div className="editorial-featured--info_box">
                 <div className="top-left"></div>
@@ -130,18 +145,18 @@ const Editorial = () => {
                 
                 
                 <div className="editorial-featured--info_content">
-                <p className='info-value'>{editorial.description[currentLanguage]}</p>
+                <p className='info-value'>{editorial.description[lang]}</p>
                 {author && (
                   <div>
                     <p className="editorial-label">{t('photographer')}:</p>
-                    <p className='info-value'>{author.name[currentLanguage]}</p>
+                    <p className='info-value'>{author.name[lang]}</p>
                   </div>
                 )}
                 {editorialCategories.length > 0 && (
                 <div>
                   <p className="editorial-label">{t('categories')}:</p>
                     {editorialCategories.map((category, index) => (
-                        <span className='info-value' key={index}>{category.name[currentLanguage]}&emsp;</span>
+                        <span className='info-value' key={index}>{category.name[lang]}&emsp;</span>
                     ))}
                 </div>
                  )}
@@ -165,7 +180,7 @@ const Editorial = () => {
               <img
                 key={index}
                 src={`${PREFIX}/${image.path}`}
-                alt={`${editorial.name[currentLanguage]} -  ${index + 1}`}
+                alt={`${editorial.name[lang]} -  ${index + 1}`}
                 className={`editorial-images_singleImg ${imageClasses[index]}`}
                 onLoad={(event) => handleImageLoad(index, event)}
               /> ))

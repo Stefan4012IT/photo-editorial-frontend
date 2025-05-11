@@ -16,13 +16,15 @@ import { motion } from "framer-motion";
 import { ThemeContext } from '../context/ThemeContext';
 import { Link as RouterLink } from 'react-router-dom'; 
 import { Link as ScrollLink } from 'react-scroll';
+import { LanguageContext } from '../context/LanguageContext';
 
 const Home = () => {
     const [editorials, setEditorials] = useState([]);
     const { theme } = useContext(ThemeContext);
     const { setCurrentPage } = useContext(ThemeContext);
     const { i18n, t } = useTranslation();
-    const currentLanguage = i18n.language;
+    // const lang = i18n.language;
+    const { lang } = useContext(LanguageContext);
     const [isLoaded, setIsLoaded] = useState(false); // Da prati status učitavanja
     
     const [about, editorials_1, contact] = t('menu', { returnObjects: true });
@@ -181,9 +183,9 @@ const Home = () => {
                 {editorials.slice(0, visibleEditorials).map((editorial, index) => (
                   <RouterLink to={`/editorial/${editorial.id}`}>
                     <div href='' className={`editorial-item editorial-item-1`} key={editorial.id}>
-                      <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name[currentLanguage]} />
+                      <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name[lang]} />
                       <div className="album-overlay"></div>
-                      <h4 className="overlay-title">{editorial.name[currentLanguage]}</h4>
+                      <h4 className="overlay-title">{editorial.name[lang]}</h4>
                     </div>
                   </RouterLink>
                   ))}

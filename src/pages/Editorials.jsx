@@ -8,12 +8,13 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NoiseBackgroundVelvet from '../components/NoiseBackgroundVelvet';
 import { Link as RouterLink } from 'react-router-dom'; 
+import { LanguageContext } from '../context/LanguageContext';
 
 const Editorials = () => {
   const { theme } = useContext(ThemeContext);
   const { setCurrentPage } = useContext(ThemeContext);
   const { i18n, t } = useTranslation();
-  const currentLanguage = i18n.language;
+  const { lang } = useContext(LanguageContext);
   const [editorials, setEditorials] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false); // Da prati status učitavanja
 
@@ -73,9 +74,9 @@ const Editorials = () => {
                 {editorials.map((editorial, index) => (
                   <RouterLink to={`/editorial/${editorial.id}`}>
                     <div className={`editorial-item editorial-item-1`} key={editorial.id}>
-                      <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name[currentLanguage]} />
+                      <img src={`${PREFIX}/${editorial.featuredImage}`} alt={editorial.name[lang]} />
                       <div className="album-overlay"></div>
-                      <h4 className="overlay-title">{editorial.name[currentLanguage]}</h4>
+                      <h4 className="overlay-title">{editorial.name[lang]}</h4>
                     </div>
                   </RouterLink>
                   ))}
