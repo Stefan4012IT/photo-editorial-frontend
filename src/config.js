@@ -1,3 +1,3 @@
-const PREFIX = "/photo-editorial-frontend";
+const PREFIX = process.env.PUBLIC_URL || '';
 
 export default PREFIX;
